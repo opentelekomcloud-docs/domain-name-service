@@ -39,7 +39,6 @@ Create a private zone to resolve a private domain name within VPCs.
    .. figure:: /_static/images/en-us_image_0000001124782805.png
       :alt: **Figure 1** Creating a private zone
 
-
       **Figure 1** Creating a private zone
 
    :ref:`Table 1 <en-us_topic_0057773658__dns_qs_0006_en-us_topic_0035467699_table2052132816642>` describes the parameters.

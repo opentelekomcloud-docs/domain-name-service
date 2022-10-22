@@ -40,7 +40,6 @@ Creating a Private Zone
    .. figure:: /_static/images/en-us_image_0000001124472319.png
       :alt: **Figure 1** Create Private Zone
 
-
       **Figure 1** Create Private Zone
 
 #. Set the parameters based on :ref:`Table 1 <dns_faq_031__en-us_topic_0089401572_table12455154165118>`.
@@ -122,7 +121,6 @@ Adding a PTR Record
    .. figure:: /_static/images/en-us_image_0000001124472865.png
       :alt: **Figure 2** Add Record Set
 
-
       **Figure 2** Add Record Set
 
 #. Set the parameters based on :ref:`Table 3 <dns_faq_031__en-us_topic_0089401572_table2068616914271>`.
@@ -141,7 +139,7 @@ Adding a PTR Record
       |                       |                                                                                                                               | -  If the private zone name is **192.in-addr.arpa**, enter **10.1.168** in the box.                                     |
       |                       |                                                                                                                               | -  If the private zone name is **1.168.192.in-addr.arpa**, enter **10** in the box.                                     |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-      | Type                  | Type of the record set                                                                                                        | PTR – Map IP addresses to domains                                                                                       |
+      | Type                  | Type of the record set                                                                                                        | PTR - Map IP addresses to domains                                                                                       |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
       | TTL (s)               | Cache duration of the record set, in seconds                                                                                  | The default value is **300**, which is, 5 minutes.                                                                      |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+

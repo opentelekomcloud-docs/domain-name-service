@@ -31,7 +31,6 @@ A record set is a collection of resource records that belong to the same domain 
 .. figure:: /_static/images/en-us_image_0202565181.png
    :alt: **Figure 1** Process for configuring a record set
 
-
    **Figure 1** Process for configuring a record set
 
 .. note::

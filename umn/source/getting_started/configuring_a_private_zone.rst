@@ -29,7 +29,6 @@ Process
 .. figure:: /_static/images/en-us_image_0202562548.png
    :alt: **Figure 1** Process for configuring a private zone
 
-
    **Figure 1** Process for configuring a private zone
 
 Create a Private Zone
@@ -58,7 +57,6 @@ Create a private zone to allow access to your ECS using a private domain name.
 
    .. figure:: /_static/images/en-us_image_0000001124782805.png
       :alt: **Figure 2** Creating a private zone
-
 
       **Figure 2** Creating a private zone
 
@@ -89,7 +87,7 @@ To access the ECS using example.com, add an A record set.
 #. Set the parameters as follows:
 
    -  **Name**: Leave this parameter blank. The system automatically considers example.com to be the name, and requests are routed to example.com.
-   -  **Type**: Set it to **A – Map domains to IPv4 addresses**.
+   -  **Type**: Set it to **A - Map domains to IPv4 addresses**.
    -  **Value**: Enter the private IP address of the ECS.
 
    Retain the default values for other parameters. For details, see :ref:`Adding an A Record Set <dns_usermanual_0007>`.
@@ -97,7 +95,6 @@ To access the ECS using example.com, add an A record set.
 
    .. figure:: /_static/images/en-us_image_0000001124468095.png
       :alt: **Figure 3** Add Record Set
-
 
       **Figure 3** Add Record Set
 

@@ -35,7 +35,6 @@ Disassociate a VPC from a private zone if you do not want to the private domain 
    .. figure:: /_static/images/en-us_image_0165052501.png
       :alt: **Figure 1** Associated VPC
 
-
       **Figure 1** Associated VPC
 
 6. In the **Disassociate VPC** dialog box, click **Yes**.
@@ -43,7 +42,6 @@ Disassociate a VPC from a private zone if you do not want to the private domain 
 
    .. figure:: /_static/images/en-us_image_0165052502.png
       :alt: **Figure 2** Disassociating a VPC
-
 
       **Figure 2** Disassociating a VPC
 

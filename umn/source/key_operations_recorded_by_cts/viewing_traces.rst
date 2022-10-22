@@ -29,7 +29,6 @@ This section describes how to query these records.
    .. figure:: /_static/images/en-us_image_0138290689.png
       :alt: **Figure 1** Filters
 
-
       **Figure 1** Filters
 
    -  **Trace Type**, **Trace Source**, **Resource Type**, and **Search By**

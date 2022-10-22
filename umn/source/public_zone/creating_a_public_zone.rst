@@ -38,7 +38,6 @@ If your domain name is registered with a third-party registrar, create a public 
    .. figure:: /_static/images/en-us_image_0000001124643421.png
       :alt: **Figure 1** Creating a public zone
 
-
       **Figure 1** Creating a public zone
 
    :ref:`Table 1 <en-us_topic_0035467702__en-us_topic_0035467699_en-us_topic_0035467699_table2052132816642>` describes the parameters.

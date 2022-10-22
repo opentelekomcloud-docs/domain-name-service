@@ -17,7 +17,6 @@ A private zone contains information about how to map domain names used within VP
 .. figure:: /_static/images/en-us_image_0159806763.png
    :alt: **Figure 1** Process for resolving a private domain name
 
-
    **Figure 1** Process for resolving a private domain name
 
 When an ECS in the VPC requests a private domain name, the private DNS server directly returns a private IP address mapped to the domain name.
@@ -43,8 +42,8 @@ You can plan host names based on the locations, usages, and account information 
 
 For example, if you have deployed 20 ECSs in an AZ, 10 for website A and 10 for website B, you can plan their host names (private domain names) as follows:
 
--  ECSs for website A: weba01.region1.az1.com – weba10.region1.az1.com
--  ECSs for website B: webb01.region1.az1.com – webb10.region1.az1.com
+-  ECSs for website A: weba01.region1.az1.com - weba10.region1.az1.com
+-  ECSs for website B: webb01.region1.az1.com - webb10.region1.az1.com
 
 After you configure the host names, you will be able to quickly determine the locations and usages of ECSs during routine management and maintenance.
 
@@ -67,7 +66,6 @@ If you create a private zone for each server in the VPCs and map their host name
 
 .. figure:: /_static/images/en-us_image_0196001479.png
    :alt: **Figure 2** Configuring private DNS for cloud servers
-
 
    **Figure 2** Configuring private DNS for cloud servers
 
@@ -105,6 +103,5 @@ When you create an ECS, note the following:
 
 .. figure:: /_static/images/en-us_image_0000001133045125.png
    :alt: **Figure 3** Accessing cloud services
-
 
    **Figure 3** Accessing cloud services
