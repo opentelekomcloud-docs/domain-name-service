@@ -17,7 +17,6 @@ A project ID needs to be specified in the URIs of some APIs. Therefore, you need
    .. figure:: /_static/images/en-us_image_0218975120.png
       :alt: **Figure 1** Viewing project IDs
 
-
       **Figure 1** Viewing project IDs
 
    In multi-project scenarios, expand the region, and obtain your sub-project ID from the **Project ID** column.
