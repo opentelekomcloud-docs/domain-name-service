@@ -33,7 +33,6 @@ After you finish the above steps, end users will be able to access your website 
 .. figure:: /_static/images/en-us_image_0221355590.png
    :alt: **Figure 1** How DNS routes Internet traffic to a website
 
-
    **Figure 1** How DNS routes Internet traffic to a website
 
 -  Phase 1 shows how DNS resolves your domain name.
@@ -80,7 +79,6 @@ Domain Name Resolution
 
 .. figure:: /_static/images/en-us_image_0168004604.png
    :alt: **Figure 2** Domain name resolution
-
 
    **Figure 2** Domain name resolution
 

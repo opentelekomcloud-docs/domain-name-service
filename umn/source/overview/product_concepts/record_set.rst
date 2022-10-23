@@ -61,7 +61,6 @@ Record sets are used in following scenarios:
    .. figure:: /_static/images/en-us_image_0201534885.png
       :alt: **Figure 1** Website domain name resolution
 
-
       **Figure 1** Website domain name resolution
 
 -  Private domain name resolution
@@ -71,7 +70,6 @@ Record sets are used in following scenarios:
 
    .. figure:: /_static/images/en-us_image_0201578061.png
       :alt: **Figure 2** Private domain name resolution
-
 
       **Figure 2** Private domain name resolution
 
@@ -83,7 +81,6 @@ Record sets are used in following scenarios:
    .. figure:: /_static/images/en-us_image_0201534900.png
       :alt: **Figure 3** Email domain name resolution
 
-
       **Figure 3** Email domain name resolution
 
 -  Reverse resolution on a private network
@@ -93,7 +90,6 @@ Record sets are used in following scenarios:
 
    .. figure:: /_static/images/en-us_image_0201534953.png
       :alt: **Figure 4** Reverse resolution on a private network
-
 
       **Figure 4** Reverse resolution on a private network
 

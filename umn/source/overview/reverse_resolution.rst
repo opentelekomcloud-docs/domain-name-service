@@ -16,7 +16,6 @@ In the following figure, an ECS serves as an email server, and a PTR record is c
 .. figure:: /_static/images/en-us_image_0165559749.png
    :alt: **Figure 1** Reverse resolution
 
-
    **Figure 1** Reverse resolution
 
 .. note::

@@ -31,7 +31,6 @@ Process
 .. figure:: /_static/images/en-us_image_0202563729.png
    :alt: **Figure 1** Process for configuring a domain name
 
-
    **Figure 1** Process for configuring a domain name
 
 Step 1. Create a Public Zone
@@ -59,7 +58,6 @@ Create a public zone for your domain name and add record sets to it.
    .. figure:: /_static/images/en-us_image_0000001124643421.png
       :alt: **Figure 2** Creating a public zone
 
-
       **Figure 2** Creating a public zone
 
 #. Click **OK**.
@@ -69,7 +67,6 @@ Create a public zone for your domain name and add record sets to it.
 
    .. figure:: /_static/images/en-us_image_0000001124467607.png
       :alt: **Figure 3** Public zone list
-
 
       **Figure 3** Public zone list
 
@@ -94,7 +91,7 @@ Add an A record set to the created public zone to allow access the website using
 #. Set the parameters as follows:
 
    -  **Name**: Leave this parameter blank. The system automatically considers example.com to be the name, and requests are routed to example.com.
-   -  **Type**: Set it to **A – Map domains to IPv4 addresses**.
+   -  **Type**: Set it to **A - Map domains to IPv4 addresses**.
    -  **Value**: Enter the EIP of the web server.
 
    Retain default settings for other parameters. For detailed descriptions of the parameters, see :ref:`Adding an A Record Set <dns_usermanual_0007>`.
@@ -102,7 +99,6 @@ Add an A record set to the created public zone to allow access the website using
 
    .. figure:: /_static/images/en-us_image_0000001124782505.png
       :alt: **Figure 4** Adding an A record set
-
 
       **Figure 4** Adding an A record set
 
@@ -124,7 +120,7 @@ Add another record set to allow access to your website using www.example.com.
 #. Set the parameters as follows:
 
    -  **Name**: Set the value to **www**, indicating that the subdomain to be resolved is **www.example.com**.
-   -  **Type**: Set it to **A – Map domains to IPv4 addresses**.
+   -  **Type**: Set it to **A - Map domains to IPv4 addresses**.
    -  **Value**: Enter the EIP of the web server.
 
    Retain default settings for other parameters. For detailed descriptions of the parameters, see :ref:`Adding an A Record Set <dns_usermanual_0007>`.
@@ -132,7 +128,6 @@ Add another record set to allow access to your website using www.example.com.
 
    .. figure:: /_static/images/en-us_image_0000001124585707.png
       :alt: **Figure 5** Adding an A record set
-
 
       **Figure 5** Adding an A record set
 
@@ -172,7 +167,6 @@ If DNS servers of the public domain name are not the same as those in the NS rec
 
    .. figure:: /_static/images/en-us_image_0239436929.png
       :alt: **Figure 6** NS record set
-
 
       **Figure 6** NS record set
 

@@ -60,7 +60,6 @@ Currently, you can configure PTR records only for IP addresses with a 32-bit sub
    .. figure:: /_static/images/en-us_image_0000001124586421.png
       :alt: **Figure 1** Creating a PTR record
 
-
       **Figure 1** Creating a PTR record
 
 #. Set the parameters based on :ref:`Table 1 <en-us_topic_0077500015__en-us_topic_0040322596_en-us_topic_0035467699_table2052132816642>`.
@@ -115,7 +114,6 @@ Currently, you can configure PTR records only for IP addresses with a 32-bit sub
 
    .. figure:: /_static/images/en-us_image_0239453060.png
       :alt: **Figure 2** PTR Records
-
 
       **Figure 2** PTR Records
 

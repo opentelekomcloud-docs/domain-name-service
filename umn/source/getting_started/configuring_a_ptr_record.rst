@@ -65,7 +65,6 @@ Currently, you can configure PTR records only for IP addresses with a 32-bit sub
    .. figure:: /_static/images/en-us_image_0000001124586421.png
       :alt: **Figure 1** Creating a PTR record
 
-
       **Figure 1** Creating a PTR record
 
 #. Click **OK**.
@@ -75,7 +74,6 @@ Currently, you can configure PTR records only for IP addresses with a 32-bit sub
 
    .. figure:: /_static/images/en-us_image_0239453060.png
       :alt: **Figure 2** PTR Records
-
 
       **Figure 2** PTR Records
 

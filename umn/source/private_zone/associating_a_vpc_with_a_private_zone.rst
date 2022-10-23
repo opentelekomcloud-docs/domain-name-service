@@ -39,7 +39,6 @@ Associate a VPC with a private zone so that the private domain name can work in 
    .. figure:: /_static/images/en-us_image_0198815181.png
       :alt: **Figure 1** Associating a VPC
 
-
       **Figure 1** Associating a VPC
 
 7. Click **OK**.
