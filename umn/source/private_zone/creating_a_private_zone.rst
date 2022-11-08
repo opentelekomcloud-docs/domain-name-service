@@ -54,7 +54,7 @@ Create a private zone to resolve a private domain name within VPCs.
       |                       |                                                                                                                                    |                         |
       |                       | You can enter a top-level domain that complies with the domain naming rules.                                                       |                         |
       +-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-------------------------+
-      | VPC                   | VPC to be associated with the private zone                                                                                         | -                       |
+      | VPC                   | VPC to be associated with the private zone                                                                                         | ``-``                   |
       |                       |                                                                                                                                    |                         |
       |                       | .. note::                                                                                                                          |                         |
       |                       |                                                                                                                                    |                         |
