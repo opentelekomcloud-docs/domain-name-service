@@ -21,63 +21,63 @@ For details, see :ref:`Table 1 <dns_api_62003__table36421405182556>`.
 
 .. table:: **Table 1** Parameters in the URI
 
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Mandatory       | Type            | Description                                                                                                                                 |
-   +=======================+=================+=================+=============================================================================================================================================+
-   | type                  | No              | String          | Zone type, which can be **public** or **private**                                                                                           |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | -  **public**: Public zones are queried.                                                                                                    |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | -  **private**: Private zones are queried.                                                                                                  |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 |    If the value is left blank, public zones are queried by default.                                                                         |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | A fuzzy search will be performed.                                                                                                           |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value is left blank by default.                                                                                                         |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | marker                | No              | String          | Start resource ID of pagination query. If the parameter is left blank, only resources on the first page are queried.                        |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit                 | No              | Integer         | Number of resources on each page                                                                                                            |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value ranges from **0** to **500**.                                                                                                     |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | Commonly used values are **10**, **20**, and **50**. The default value is **500**.                                                          |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | offset                | No              | Integer         | Start offset of pagination query. The query will start from the next resource of the offset value.                                          |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value ranges from **0** to **2147483647**.                                                                                              |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The default value is 0.                                                                                                                     |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | If **marker** is not left blank, the query starts from the resource specified by **marker**.                                                |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags                  | No              | String          | Resource tag                                                                                                                                |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The format is as follows: **key1,value1|key2,value2**.                                                                                      |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | Multiple tags are separated by vertical bar (|). The key and value of each tag are separated by comma (,).                                  |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The tags are in AND relationship.                                                                                                           |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | For details, see :ref:`Adding Resource Tags <dns_api_67001>`.                                                                               |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | An exact match will be performed. If the value starts with an asterisk (*), fuzzy matching will work for the string following the asterisk. |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value is left blank by default.                                                                                                         |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | name                  | No              | String          | Zone name                                                                                                                                   |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | A fuzzy search will be performed.                                                                                                           |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | status                | No              | String          | Resource status                                                                                                                             |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | For details, see :ref:`Resource Status <dns_api_80005__section33673592114748>`.                                                             |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | enterprise_project_id | No              | String          | ID of the enterprise project associated with the public zone. The value contains a maximum of 36 characters.                                |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The default value is **0**.                                                                                                                 |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory       | Type            | Description                                                                                                                                     |
+   +=======================+=================+=================+=================================================================================================================================================+
+   | type                  | No              | String          | Zone type, which can be **public** or **private**                                                                                               |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | -  **public**: Public zones are queried.                                                                                                        |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | -  **private**: Private zones are queried.                                                                                                      |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 |    If the value is left blank, public zones are queried by default.                                                                             |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | A fuzzy search will be performed.                                                                                                               |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value is left blank by default.                                                                                                             |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | marker                | No              | String          | Start resource ID of pagination query. If the parameter is left blank, only resources on the first page are queried.                            |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | limit                 | No              | Integer         | Number of resources on each page                                                                                                                |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value ranges from **0** to **500**.                                                                                                         |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | Commonly used values are **10**, **20**, and **50**. The default value is **500**.                                                              |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | offset                | No              | Integer         | Start offset of pagination query. The query will start from the next resource of the offset value.                                              |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value ranges from **0** to **2147483647**.                                                                                                  |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The default value is 0.                                                                                                                         |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | If **marker** is not left blank, the query starts from the resource specified by **marker**.                                                    |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tags                  | No              | String          | Resource tag                                                                                                                                    |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The format is as follows: **key1,value1|key2,value2**.                                                                                          |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | Multiple tags are separated by vertical bar (|). The key and value of each tag are separated by comma (,).                                      |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The tags are in AND relationship.                                                                                                               |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | For details, see :ref:`Adding Resource Tags <dns_api_67001>`.                                                                                   |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | An exact match will be performed. If the value starts with an asterisk (``*``), fuzzy matching will work for the string following the asterisk. |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value is left blank by default.                                                                                                             |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | name                  | No              | String          | Zone name                                                                                                                                       |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | A fuzzy search will be performed.                                                                                                               |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | status                | No              | String          | Resource status                                                                                                                                 |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | For details, see :ref:`Resource Status <dns_api_80005__section33673592114748>`.                                                                 |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | enterprise_project_id | No              | String          | ID of the enterprise project associated with the public zone. The value contains a maximum of 36 characters.                                    |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The default value is **0**.                                                                                                                     |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
