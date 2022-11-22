@@ -21,51 +21,51 @@ For details, see :ref:`Table 1 <dns_api_66004__table1562846014112>`.
 
 .. table:: **Table 1** Parameters in the URI
 
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Mandatory       | Type            | Description                                                                                                                                 |
-   +=======================+=================+=================+=============================================================================================================================================+
-   | marker                | No              | String          | Start resource ID of pagination query                                                                                                       |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | If the parameter is left blank, only resources on the first page are queried.                                                               |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value is left blank by default.                                                                                                         |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit                 | No              | Integer         | Number of resources on each page                                                                                                            |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value ranges from **0** to **500**.                                                                                                     |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | Commonly used values are **10**, **20**, and **50**. The default value is **500**.                                                          |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | offset                | No              | Integer         | Start offset of pagination query. The query will start from the next resource of the offset value.                                          |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value ranges from **0** to **2147483647**.                                                                                              |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The default value is 0.                                                                                                                     |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | If **marker** is not left blank, the query starts from the resource specified by **marker**.                                                |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | enterprise_project_id | No              | String          | Specifies the ID of the enterprise project associated with the PTR record. The value contains a maximum of 36 characters.                   |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The default value is **0**.                                                                                                                 |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags                  | No              | String          | Resource tag                                                                                                                                |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The format is as follows: **key1,value1|key2,value2**.                                                                                      |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | Multiple tags are separated by vertical bar (|). The key and value of each tag are separated by comma (,).                                  |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The tags are in AND relationship.                                                                                                           |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | For details, see :ref:`Adding Resource Tags <dns_api_67001>`.                                                                               |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | An exact match will be performed. If the value starts with an asterisk (*), fuzzy matching will work for the string following the asterisk. |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | The value is left blank by default.                                                                                                         |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | status                | No              | String          | Resource status                                                                                                                             |
-   |                       |                 |                 |                                                                                                                                             |
-   |                       |                 |                 | For details, see :ref:`Resource Status <dns_api_80005__section33673592114748>`.                                                             |
-   +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory       | Type            | Description                                                                                                                                     |
+   +=======================+=================+=================+=================================================================================================================================================+
+   | marker                | No              | String          | Start resource ID of pagination query                                                                                                           |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | If the parameter is left blank, only resources on the first page are queried.                                                                   |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value is left blank by default.                                                                                                             |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | limit                 | No              | Integer         | Number of resources on each page                                                                                                                |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value ranges from **0** to **500**.                                                                                                         |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | Commonly used values are **10**, **20**, and **50**. The default value is **500**.                                                              |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | offset                | No              | Integer         | Start offset of pagination query. The query will start from the next resource of the offset value.                                              |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value ranges from **0** to **2147483647**.                                                                                                  |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The default value is 0.                                                                                                                         |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | If **marker** is not left blank, the query starts from the resource specified by **marker**.                                                    |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | enterprise_project_id | No              | String          | Specifies the ID of the enterprise project associated with the PTR record. The value contains a maximum of 36 characters.                       |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The default value is **0**.                                                                                                                     |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tags                  | No              | String          | Resource tag                                                                                                                                    |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The format is as follows: **key1,value1|key2,value2**.                                                                                          |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | Multiple tags are separated by vertical bar (|). The key and value of each tag are separated by comma (,).                                      |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The tags are in AND relationship.                                                                                                               |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | For details, see :ref:`Adding Resource Tags <dns_api_67001>`.                                                                                   |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | An exact match will be performed. If the value starts with an asterisk (``*``), fuzzy matching will work for the string following the asterisk. |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | The value is left blank by default.                                                                                                             |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | status                | No              | String          | Resource status                                                                                                                                 |
+   |                       |                 |                 |                                                                                                                                                 |
+   |                       |                 |                 | For details, see :ref:`Resource Status <dns_api_80005__section33673592114748>`.                                                                 |
+   +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
