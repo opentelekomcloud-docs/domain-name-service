@@ -102,9 +102,9 @@ Request
       |                 |                 |                  |                                                                                                                             |
       |                 |                 |                  | A value contains a maximum of 255 Unicode characters.                                                                       |
       |                 |                 |                  |                                                                                                                             |
-      |                 |                 |                  | The asterisk (*) is a reserved character.                                                                                   |
+      |                 |                 |                  | The asterisk (``*``) is a reserved character.                                                                               |
       |                 |                 |                  |                                                                                                                             |
-      |                 |                 |                  | If the value starts with an asterisk (*), fuzzy matching will work for the string following the asterisk.                   |
+      |                 |                 |                  | If the value starts with an asterisk (``*``), fuzzy matching will work for the string following the asterisk.               |
       |                 |                 |                  |                                                                                                                             |
       |                 |                 |                  | If this parameter is not specified, any value is matched. The values are in OR relationship.                                |
       +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------+
