@@ -8,7 +8,7 @@ Creating a Wildcard DNS Record Set
 **Scenarios**
 -------------
 
-A wildcard DNS record set is used to match requests for all subdomains in a zone. You can add a record whose name is an asterisk (*) to resolve requests to all subdomains of the domain name to the same value.
+A wildcard DNS record set is used to match requests for all subdomains in a zone. You can add a record whose name is an asterisk (``*``) to resolve requests to all subdomains of the domain name to the same value.
 
 This section describes how to create a wildcard DNS record set.
 
@@ -47,7 +47,7 @@ Wildcard DNS resolution does not support NS record sets.
       +=======================+========================================================================================================================================================+==========================================================================================================+
       | Name                  | Public (or private) domain name                                                                                                                        | \*.abc                                                                                                   |
       |                       |                                                                                                                                                        |                                                                                                          |
-      |                       | Enter an asterisk (*) as the leftmost label of the domain name, for example, **\*.example.com**.                                                       |                                                                                                          |
+      |                       | Enter an asterisk (``*``) as the leftmost label of the domain name, for example, **\*.example.com**.                                                   |                                                                                                          |
       |                       |                                                                                                                                                        |                                                                                                          |
       |                       | .. note::                                                                                                                                              |                                                                                                          |
       |                       |                                                                                                                                                        |                                                                                                          |
