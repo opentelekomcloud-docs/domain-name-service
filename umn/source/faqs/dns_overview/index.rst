@@ -18,7 +18,7 @@ DNS Overview
    :hidden: 
 
    will_i_be_billed_for_the_dns_service
-   how_many_zones,_ptr_records,_and_record_sets_can_i_create
+   how_many_zones_ptr_records_and_record_sets_can_i_create
    does_dns_support_wildcard_entries
    how_are_zones_queried_to_resolve_a_domain_name
    why_was_the_email_address_format_changed_in_the_soa_record
