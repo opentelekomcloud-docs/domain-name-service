@@ -9,5 +9,7 @@ Domain Name Service (DNS) provides highly available and scalable authoritative D
 
    .. service_card::
       :service_type: dns
+      :environment: internal
       :umn: This document describes basic concepts, functions, key terms, and FAQs of DNS and provides instructions for applying for and using DNS.
       :api-ref: This document describes application programming interfaces (APIs) of Domain Name Service (DNS) and provides API parameter description and example values.
+      :best-practice: To use Domain Name Service more securely, reliably, flexibly, and efficiently, you are advised to follow the following best practices.
