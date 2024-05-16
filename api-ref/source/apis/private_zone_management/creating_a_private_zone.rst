@@ -22,49 +22,45 @@ Request
 
    .. table:: **Table 1** Parameters in the request
 
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | Parameter             | Mandatory       | Type            | Description                                                                                                                 |
-      +=======================+=================+=================+=============================================================================================================================+
-      | name                  | Yes             | String          | Domain name of the zone to be created                                                                                       |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | -  If a domain name is ended with a dot (.), it cannot exceed 254 characters.                                               |
-      |                       |                 |                 | -  Otherwise, the domain name cannot exceed 253 characters.                                                                 |
-      |                       |                 |                 | -  Labels of a domain name are separated by dot (.). Each label cannot exceed 63 characters.                                |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | A domain name is case insensitive. Uppercase letters will also be converted into lowercase letters.                         |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | description           | No              | String          | Description of the zone, which cannot exceed 255 characters                                                                 |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | The value is left blank by default.                                                                                         |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | zone_type             | Yes             | String          | Zone type                                                                                                                   |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | The value must be **private**, indicating private zones accessible only to hosts in specified VPCs will be created.         |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | For details about creating a public zone, see section :ref:`Creating a Public Zone <dns_api_62001>`.                        |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | email                 | No              | String          | Email address of the administrator managing the zone                                                                        |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | The default value is the service email address.                                                                             |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | ttl                   | No              | Integer         | Caching period of the SOA record set (in seconds)                                                                           |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | The value ranges from **1** to **2147483647**.                                                                              |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | The default value is **300**.                                                                                               |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | router                | Yes             | Object          | Router information (VPC associated with the private zone)                                                                   |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | For details, see :ref:`Table 2 <dns_api_63002__table4448008117179>`.                                                        |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | tags                  | No              | Array of object | Resource tag. For details, see :ref:`Table 3 <dns_api_63002__table58807309208>`.                                            |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | The value is left blank by default.                                                                                         |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-      | enterprise_project_id | No              | String          | Specifies the ID of the enterprise project associated with the private zone. The value contains a maximum of 36 characters. |
-      |                       |                 |                 |                                                                                                                             |
-      |                       |                 |                 | The default value is **0**.                                                                                                 |
-      +-----------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type            | Description                                                                                                         |
+      +=================+=================+=================+=====================================================================================================================+
+      | name            | Yes             | String          | Domain name of the zone to be created                                                                               |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | -  If a domain name is ended with a dot (.), it cannot exceed 254 characters.                                       |
+      |                 |                 |                 | -  Otherwise, the domain name cannot exceed 253 characters.                                                         |
+      |                 |                 |                 | -  A domain name cannot exceed 63 characters. Multiple domain names are separated with dots (.).                    |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | A domain name is case insensitive. Uppercase letters will also be converted into lowercase letters.                 |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+      | description     | No              | String          | Description of the domain name, which cannot exceed 255 characters                                                  |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | The value is left blank by default.                                                                                 |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+      | zone_type       | Yes             | String          | Zone type                                                                                                           |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | The value must be **private**, indicating private zones accessible only to hosts in specified VPCs will be created. |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | For details about creating a public zone, see section :ref:`Creating a Public Zone <dns_api_62001>`.                |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+      | email           | No              | String          | Email address of the administrator managing the zone                                                                |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | The default value is the service email address.                                                                     |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+      | ttl             | No              | Integer         | Caching period of the SOA record set (in seconds)                                                                   |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | The value ranges from **1** to **2147483647**.                                                                      |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | The default value is **300**.                                                                                       |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+      | router          | Yes             | Object          | Router information (VPC associated with the private zone)                                                           |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | For details, see :ref:`Table 2 <dns_api_63002__table4448008117179>`.                                                |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+      | tags            | No              | Array of object | Resource tag. For details, see :ref:`Table 3 <dns_api_63002__table58807309208>`.                                    |
+      |                 |                 |                 |                                                                                                                     |
+      |                 |                 |                 | The value is left blank by default.                                                                                 |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
 
    .. _dns_api_63002__table4448008117179:
 
@@ -84,13 +80,17 @@ Request
 
    .. table:: **Table 3** Description of the **tags** field
 
-      +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter | Mandatory | Type   | Description                                                                                                                                                     |
-      +===========+===========+========+=================================================================================================================================================================+
-      | key       | Yes       | String | Tag key. The key contains 36 Unicode characters at most and cannot be blank. It can contain only digits, letters, hyphens (-), and underscores (_).             |
-      +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | value     | No        | String | Tag value. Each value contains 43 Unicode characters at most and can be an empty string. It can contain only digits, letters, hyphens (-), and underscores (_). |
-      +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type            | Description                                                                                                                                                    |
+      +=================+=================+=================+================================================================================================================================================================+
+      | key             | Yes             | String          | Tag key                                                                                                                                                        |
+      |                 |                 |                 |                                                                                                                                                                |
+      |                 |                 |                 | A key can contain up to 36 Unicode characters. **key** must be specified. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | value           | No              | String          | Tag value                                                                                                                                                      |
+      |                 |                 |                 |                                                                                                                                                                |
+      |                 |                 |                 | Each value can contain up to 43 Unicode characters and can be an empty string.                                                                                 |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example request
 
@@ -140,6 +140,10 @@ Response
       | zone_type             | String                | Zone type, which can be **public** or **private**                                                                        |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
       | ttl                   | Integer               | TTL value of the SOA record set in the zone                                                                              |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | The value ranges from **1** to **2147483647**.                                                                           |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | The default value is **300**.                                                                                            |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
       | serial                | Integer               | Serial number in the SOA record set in a zone, which identifies the change on the primary DNS server                     |
       |                       |                       |                                                                                                                          |
@@ -235,6 +239,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.

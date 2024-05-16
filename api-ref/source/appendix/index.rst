@@ -2,8 +2,8 @@
 
 .. _dns_api_80000:
 
-Public Parameters
-=================
+Appendix
+========
 
 -  :ref:`Status Code <dns_api_80002>`
 -  :ref:`Error Code <dns_api_80003>`

@@ -10,9 +10,9 @@ Enumeration Values
 Resource Status
 ---------------
 
-=============== ===========
+=============== ==============================
 Parameter       Description
-=============== ===========
+=============== ==============================
 ACTIVE          Normal
 PENDING_CREATE  Creating
 PENDING_DELETE  Deleting
@@ -21,7 +21,9 @@ FREEZE          Frozen
 PENDING_DISABLE Disabling
 DISABLE         Disabled
 ERROR           Failed
-=============== ===========
+ILLEGAL         Frozen due to abuse
+POLICE          Frozen due to security reasons
+=============== ==============================
 
 .. _dns_api_80005__section1188113824413:
 
@@ -43,7 +45,7 @@ Record Set Type
 +-------+------------------------------------------------------------------------------------------------------------------------------------------+
 | SRV   | Record servers providing specific services.                                                                                              |
 +-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| NS    | Delegate subdomains to other name servers.                                                                                               |
+| NS    | Delegates subdomains to other name servers.                                                                                              |
 +-------+------------------------------------------------------------------------------------------------------------------------------------------+
 | SOA   | Specify the master authoritative DNS server for a domain name. The SOA record set is created by the system and cannot be manually added. |
 +-------+------------------------------------------------------------------------------------------------------------------------------------------+
