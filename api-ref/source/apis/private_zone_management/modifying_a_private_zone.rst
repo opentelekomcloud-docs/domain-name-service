@@ -53,7 +53,7 @@ Request
       +-----------------+-----------------+-----------------+-----------------------------------------------------------------+
       | ttl             | No              | Integer         | Caching period of the SOA record set (in seconds)               |
       |                 |                 |                 |                                                                 |
-      |                 |                 |                 | The value ranges from 1 to **2147483647**.                      |
+      |                 |                 |                 | The value ranges from **1** to **2147483647**.                  |
       |                 |                 |                 |                                                                 |
       |                 |                 |                 | If this parameter is left blank, the value will not be changed. |
       |                 |                 |                 |                                                                 |
@@ -97,6 +97,10 @@ Response
       | zone_type             | String                | Zone type, which can be **public** or **private**                                                                        |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
       | ttl                   | Integer               | TTL value of the SOA record set in the zone                                                                              |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | The value ranges from **1** to **2147483647**.                                                                           |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | The default value is **300**.                                                                                            |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
       | serial                | Integer               | Serial number in the SOA record set in a zone, which identifies the change on the primary DNS server                     |
       |                       |                       |                                                                                                                          |
@@ -141,7 +145,6 @@ Response
       Parameter Type   Description
       ========= ====== ============================
       self      String Link to the current resource
-      next      String Link to the next page
       ========= ====== ============================
 
    .. _dns_api_63009__table4448008117179:
@@ -196,6 +199,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.

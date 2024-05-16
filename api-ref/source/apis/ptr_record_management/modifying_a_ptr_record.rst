@@ -10,6 +10,10 @@ Function
 
 Modify the PTR record for an EIP.
 
+.. note::
+
+   The same :ref:`URI <dns_api_66002__section53701671161015>` is used to :ref:`create <dns_api_66002>`, :ref:`modify <dns_api_66006>`, and :ref:`delete <dns_api_66005>` PTR records. Different request bodies are used to implement different functions.
+
 URI
 ---
 
@@ -21,12 +25,12 @@ For details, see :ref:`Table 1 <dns_api_66006__table6099729418149>`.
 
 .. table:: **Table 1** Parameters in the URI
 
-   ============= ========= ====== =====================
+   ============= ========= ====== ====================
    Parameter     Mandatory Type   Description
-   ============= ========= ====== =====================
-   region        Yes       String Region of the tenant.
+   ============= ========= ====== ====================
+   region        Yes       String Region of the tenant
    floatingip_id Yes       String EIP ID
-   ============= ========= ====== =====================
+   ============= ========= ====== ====================
 
 Request
 -------
@@ -35,41 +39,25 @@ Request
 
    .. table:: **Table 2** Parameters in the request
 
-      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter       | Mandatory       | Type            | Description                                                                                                                  |
-      +=================+=================+=================+==============================================================================================================================+
-      | ptrdname        | Yes             | String          | Domain name of the PTR record                                                                                                |
-      |                 |                 |                 |                                                                                                                              |
-      |                 |                 |                 | A domain name is case insensitive. Uppercase letters will also be converted into lowercase letters.                          |
-      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-      | description     | No              | String          | PTR record description                                                                                                       |
-      |                 |                 |                 |                                                                                                                              |
-      |                 |                 |                 | The value is left blank by default.                                                                                          |
-      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-      | ttl             | No              | Integer         | PTR record cache duration (in second) on a local DNS server. The longer the duration is, the slower the update takes effect. |
-      |                 |                 |                 |                                                                                                                              |
-      |                 |                 |                 | If your service address is frequently changed, set TTL to a smaller value.                                                   |
-      |                 |                 |                 |                                                                                                                              |
-      |                 |                 |                 | The value ranges from **1** to **2147483647**.                                                                               |
-      |                 |                 |                 |                                                                                                                              |
-      |                 |                 |                 | The default value is **300**.                                                                                                |
-      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-      | tags            | No              | Array of object | Resource tag. For details, see :ref:`Table 3 <dns_api_66006__table9752964195025>`.                                           |
-      |                 |                 |                 |                                                                                                                              |
-      |                 |                 |                 | It is left blank by default.                                                                                                 |
-      +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-
-   .. _dns_api_66006__table9752964195025:
-
-   .. table:: **Table 3** Description of the **tags** field
-
-      +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter | Mandatory | Type   | Description                                                                                                                                                     |
-      +===========+===========+========+=================================================================================================================================================================+
-      | key       | Yes       | String | Tag key. The key contains 36 Unicode characters at most and cannot be blank. It can contain only digits, letters, hyphens (-), and underscores (_).             |
-      +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | value     | No        | String | Tag value. Each value contains 43 Unicode characters at most and can be an empty string. It can contain only digits, letters, hyphens (-), and underscores (_). |
-      +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type            | Description                                                                                                                   |
+      +=================+=================+=================+===============================================================================================================================+
+      | ptrdname        | Yes             | String          | Domain name of the PTR record                                                                                                 |
+      |                 |                 |                 |                                                                                                                               |
+      |                 |                 |                 | A domain name is case insensitive. Uppercase letters will also be converted into lowercase letters.                           |
+      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | description     | No              | String          | PTR record description                                                                                                        |
+      |                 |                 |                 |                                                                                                                               |
+      |                 |                 |                 | The value is left blank by default.                                                                                           |
+      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | ttl             | No              | Integer         | PTR record cache duration (in seconds) on a local DNS server. The longer the duration is, the slower the update takes effect. |
+      |                 |                 |                 |                                                                                                                               |
+      |                 |                 |                 | If your service address is frequently changed, set TTL to a smaller value.                                                    |
+      |                 |                 |                 |                                                                                                                               |
+      |                 |                 |                 | The value ranges from **1** to **2147483647**.                                                                                |
+      |                 |                 |                 |                                                                                                                               |
+      |                 |                 |                 | The default value is **300**.                                                                                                 |
+      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example request
 
@@ -92,7 +80,7 @@ Response
 
 -  Parameter description
 
-   .. table:: **Table 4** Parameters in the response
+   .. table:: **Table 3** Parameters in the response
 
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter             | Type                  | Description                                                                                                                                                    |
@@ -103,7 +91,7 @@ Response
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | description           | String                | PTR record description                                                                                                                                         |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | ttl                   | Integer               | PTR record cache duration (in second) on a local DNS server. The longer the duration is, the slower the update takes effect.                                   |
+      | ttl                   | Integer               | PTR record cache duration (in seconds) on a local DNS server. The longer the duration is, the slower the update takes effect.                                  |
       |                       |                       |                                                                                                                                                                |
       |                       |                       | If your service address is frequently changed, set TTL to a smaller value.                                                                                     |
       |                       |                       |                                                                                                                                                                |
@@ -123,12 +111,12 @@ Response
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | links                 | Object                | Link to the current resource or other related resources                                                                                                        |
       |                       |                       |                                                                                                                                                                |
-      |                       |                       | When a response is broken into pages, a **next** link is provided to retrieve all results. For details, see :ref:`Table 5 <dns_api_66006__table354521744216>`. |
+      |                       |                       | When a response is broken into pages, a **next** link is provided to retrieve all results. For details, see :ref:`Table 4 <dns_api_66006__table354521744216>`. |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _dns_api_66006__table354521744216:
 
-   .. table:: **Table 5** Parameters in the **links** field
+   .. table:: **Table 4** Parameters in the **links** field
 
       ========= ====== ============================
       Parameter Type   Description
@@ -157,6 +145,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.
