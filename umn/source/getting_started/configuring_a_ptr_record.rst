@@ -5,42 +5,42 @@
 Configuring a PTR Record
 ========================
 
-**Scenarios**
--------------
+Scenario
+--------
 
-PTR records are used to prove credibility of IP addresses and domain names of email servers. Most spam senders use email servers whose IP addresses are dynamically allocated or not mapped to registered domain names in order to avoid being tracked. If you do not want emails sent from your email server to be considered as spam, add a PTR record to map the email server IP address to a domain name. In this way, the email recipient can obtain the domain name by IP address and will know that the email server is trustworthy.
+PTR records are used to prove credibility of IP addresses and domain names of email servers. To avoid being tracked, most spam senders use email servers whose IP addresses are dynamically allocated or not mapped to registered domain names. If you want to keep the spam out of your recipients' inbox, add a PTR record to map the email server IP address to a domain name. In this way, the email recipients can obtain the domain name by IP address and will know that the email server is trustworthy.
 
-If you use an ECS as an email server, configure a PTR record to map the ECS IP address to a domain name.
+If you use an ECS as an email server, configure a PTR record to map the EIP of the ECS to the domain name.
 
 .. note::
 
-   After an ECS is successfully created and assigned with an EIP, a PTR record will be generated for the EIP by default in format of **ecs-xx-xx-xx-xx.compute.xxx.com**, where **xx-xx-xx-xx** is the EIP and **xxx** is the domain name provided by the cloud platform.
+   After an ECS is created and assigned with an EIP, a PTR record will be generated for the EIP by default in format of **ecs-xx-xx-xx-xx.compute.xxx.com**, where **xx-xx-xx-xx** indicates the EIP and **xxx** is the domain name provided by the cloud platform.
 
-   You can use one of the following methods to query the default PTR record of an EIP:
+   You can use any of the following methods to query the default PTR record for the EIP:
 
    -  ping -a *EIP*
    -  nslookup [-qt=ptr] *EIP*
    -  dig -x *EIP*
 
-   The default PTR record of the EIP may not be applicable in some scenarios. For example, it cannot be used as the domain name of an email server. In this case, create a PTR record for the EIP.
+   The default PTR record may not be applicable in some scenarios. For example, the PTR record cannot be used as the domain name of an email server. In this case, create a PTR record for the EIP.
 
-   After you create a PTR record, the default record will be overwritten.
+   After the PTR record is created, the default record will be overwritten.
 
-This section describes how to add a PTR record for a cloud resource, such as ECS.
+This following are operations for you to add a PTR record for a cloud resource, such as ECS.
 
 Constraints
 -----------
 
-Currently, you can configure PTR records only for IP addresses with a 32-bit subnet mask.
+You can only configure PTR records for IP addresses with a 32-bit subnet mask.
 
-**Prerequisites**
------------------
+Prerequisites
+-------------
 
 -  You have registered a domain name.
 -  You have created an ECS and bound an EIP to it.
 
-**Procedure**
--------------
+Procedure
+---------
 
 #. Log in to the management console.
 
@@ -48,43 +48,41 @@ Currently, you can configure PTR records only for IP addresses with a 32-bit sub
 
    The DNS console is displayed.
 
-#. In the navigation pane, choose **PTR Records**.
+#. In the navigation pane on the left, choose **PTR Records**.
 
    The **PTR Records** page is displayed.
 
 #. Click |image1| in the upper left corner and select the desired region and project.
 
-#. Click **Create PTR Record**.
+#. Click **Create PTR Record** and configure the following parameters.
 
    -  **EIP**: Select the EIP of the ECS.
    -  **Domain Name**: Enter the domain name that the EIP points to.
 
-   Retain default settings for other parameters. For detailed descriptions of the parameters, see :ref:`Creating a PTR Record <en-us_topic_0077500015>`.
+   Configure other parameters by referring to :ref:`Creating a PTR Record <en-us_topic_0077500015>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001124586421.png
+   .. figure:: /_static/images/en-us_image_0000001906973554.png
       :alt: **Figure 1** Creating a PTR record
 
       **Figure 1** Creating a PTR record
 
 #. Click **OK**.
 
-   View the created PTR record on the **PTR Records** page.
+   You can view the created PTR record on the **PTR Records** page.
 
 
-   .. figure:: /_static/images/en-us_image_0239453060.png
+   .. figure:: /_static/images/en-us_image_0000001906973550.png
       :alt: **Figure 2** PTR Records
 
       **Figure 2** PTR Records
 
    .. note::
 
-      If the domain name is mapped to multiple EIPs, you must create a PTR record for each EIP.
+      If a domain name is mapped to multiple EIPs, you must create a PTR record for each EIP.
 
-#. Verify that the PTR record has taken effect.
+#. Verify that the PTR record has taken effect by running the following command on a PC connected to the Internet:
 
-   Run the following DOS command on a PC connected to the Internet:
+   **nslookup -qt=ptr** *EIP*
 
-   **nslookup -qt=ptr** **IP address**
-
-.. |image1| image:: /_static/images/en-us_image_0148391090.png
+.. |image1| image:: /_static/images/en-us_image_0000001906813654.png

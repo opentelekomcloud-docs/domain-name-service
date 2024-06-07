@@ -6,10 +6,11 @@ Overview
 ========
 
 -  :ref:`What Is DNS? <en-us_topic_0035467691>`
--  :ref:`Public Zone <en-us_topic_0035920135>`
--  :ref:`Private Zone <dns_pd_0005>`
+-  :ref:`Public Domain Name Resolution <en-us_topic_0035920135>`
+-  :ref:`Private Domain Name Resolution <dns_pd_0005>`
 -  :ref:`Reverse Resolution <dns_pd_0006>`
--  :ref:`Related Services <dns_pd_0008>`
+-  :ref:`Permissions <dns_pd_0002>`
+-  :ref:`Integration with Other Services <dns_pd_0008>`
 -  :ref:`Product Concepts <dns_pd_0004>`
 
 .. toctree::
@@ -17,8 +18,9 @@ Overview
    :hidden: 
 
    what_is_dns
-   public_zone
-   private_zone
+   public_domain_name_resolution
+   private_domain_name_resolution
    reverse_resolution
-   related_services
+   permissions
+   integration_with_other_services
    product_concepts/index

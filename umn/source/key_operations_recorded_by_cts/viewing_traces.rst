@@ -12,6 +12,8 @@ After CTS is enabled, the tracker starts recording operations on cloud resources
 
 This section describes how to query these records.
 
+.. _dns_usermanual_0044__section960031713714:
+
 **Procedure**
 -------------
 
@@ -19,14 +21,14 @@ This section describes how to query these records.
 
 #. Click |image1| in the upper left corner and select the desired region and project.
 
-#. Click **Service List** and select **Cloud Trace Service** under **Management & Deployment**.
+#. In the service list, choose **Management & Deployment** > **Cloud Trace Service**.
 
-#. In the navigation pane, choose **Trace List**.
+#. In the navigation pane on the left, choose **Trace List**.
 
 #. Specify the filters used for querying traces. The following filters are available:
 
 
-   .. figure:: /_static/images/en-us_image_0138290689.png
+   .. figure:: /_static/images/en-us_image_0000001942372561.png
       :alt: **Figure 1** Filters
 
       **Figure 1** Filters
@@ -49,7 +51,9 @@ This section describes how to query these records.
 
 #. Click |image2| on the left of the required trace to expand its details.
 
-#. Click **View Trace**. A dialog box is displayed, in which the trace structure details are displayed.
+#. Click **View Trace**.
 
-.. |image1| image:: /_static/images/en-us_image_0148391090.png
-.. |image2| image:: /_static/images/en-us_image_0210877115.png
+   A dialog box is displayed, in which the trace structure details are displayed.
+
+.. |image1| image:: /_static/images/en-us_image_0000001942372557.png
+.. |image2| image:: /_static/images/en-us_image_0000001906653316.png
