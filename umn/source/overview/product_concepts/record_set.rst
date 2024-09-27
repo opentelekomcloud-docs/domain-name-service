@@ -18,57 +18,57 @@ If you have created a zone on the DNS console, you can create record sets to exp
 
 .. table:: **Table 1** Record set usages
 
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | Type                  | Where to Use             | Usage                                                                                                                                      |
-   +=======================+==========================+============================================================================================================================================+
-   | A                     | Public and private zones | Maps domains to IPv4 addresses.                                                                                                            |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | CNAME                 | Public and private zones | Maps one domain name to another or multiple domain names to one domain name.                                                               |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | MX                    | Public and private zones | Maps domain names to email servers.                                                                                                        |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | AAAA                  | Public and private zones | Maps domain names to IPv6 addresses.                                                                                                       |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | TXT                   | Public and private zones | Specifies text records. TXT record sets are usually used in the following scenarios:                                                       |
-   |                       |                          |                                                                                                                                            |
-   |                       |                          | -  To record DKIM public keys to prevent email fraud.                                                                                      |
-   |                       |                          | -  To record the identity of domain name owners to facilitate domain name retrieval.                                                       |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | SRV                   | Public and private zones | Records servers providing specific services.                                                                                               |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | NS                    | Public and private zones | Delegates subdomains to other name servers.                                                                                                |
-   |                       |                          |                                                                                                                                            |
-   |                       |                          | -  For public zones, an NS record set is automatically created, and you can add NS records for subdomains.                                 |
-   |                       |                          | -  For private zones, an NS record set is automatically created, and you cannot add other NS record sets.                                  |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | SOA                   | Public and private zones | Specifies the master authoritative DNS server for a domain name. The SOA record set is created by the system and cannot be added manually. |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | CAA                   | Public zone              | Grants certificate issuing permissions to CAs. CAA record sets can be used to prevent the issuance of unauthorized HTTPS certificates.     |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-   | PTR                   | Private zone             | Maps IP addresses to domain names.                                                                                                         |
-   +-----------------------+--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Type                  | Where to Use             | Description                                                                                                                                         |
+   +=======================+==========================+=====================================================================================================================================================+
+   | A                     | Public and private zones | Maps domains to IPv4 addresses.                                                                                                                     |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | CNAME                 | Public and private zones | Maps one domain name to another domain name or multiple domain names to one domain name.                                                            |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | MX                    | Public and private zones | Maps domain names to email servers.                                                                                                                 |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | AAAA                  | Public and private zones | Maps domain names to IPv6 addresses.                                                                                                                |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | TXT                   | Public and private zones | TXT record sets are usually used to record the following:                                                                                           |
+   |                       |                          |                                                                                                                                                     |
+   |                       |                          | -  DKIM public keys to prevent email fraud                                                                                                          |
+   |                       |                          | -  The identity of domain name owners to facilitate domain name retrieval                                                                           |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | SRV                   | Public and private zones | Records servers providing specific services.                                                                                                        |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | NS                    | Public and private zones | Delegates subdomains to other name servers.                                                                                                         |
+   |                       |                          |                                                                                                                                                     |
+   |                       |                          | -  For public zones, an NS record set is automatically created, and you can add NS record sets for subdomains.                                      |
+   |                       |                          | -  For private zones, an NS record set is automatically created, and you cannot add other NS record sets.                                           |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | SOA                   | Public and private zones | Identifies the base information about a domain name. The SOA record set is automatically generated by the DNS service and cannot be added manually. |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | CAA                   | Public zone              | Grants certificate issuing permissions to CAs. CAA record sets can prevent the issuance of unauthorized HTTPS certificates.                         |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | PTR                   | Public and private zones | Maps IP addresses to domain names.                                                                                                                  |
+   +-----------------------+--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Usage
 -----
 
 Record sets are used in following scenarios:
 
--  Website domain name resolution
+-  Routing Internet traffic to a website
 
-   A and AAAA record sets are usually used to build websites. They translate domain names into IP addresses.
+   A and AAAA record sets are usually used to map domain names used by websites to IPv4 or IPv6 addresses of web servers where the websites are deployed.
 
 
-   .. figure:: /_static/images/en-us_image_0201534885.png
-      :alt: **Figure 1** Website domain name resolution
+   .. figure:: /_static/images/en-us_image_0000001942372585.png
+      :alt: **Figure 1** Accessing a website over the Internet using domain name
 
-      **Figure 1** Website domain name resolution
+      **Figure 1** Accessing a website over the Internet using domain name
 
 -  Private domain name resolution
 
    On a private network, A and AAAA record sets translate private domain names into private IP addresses.
 
 
-   .. figure:: /_static/images/en-us_image_0201578061.png
+   .. figure:: /_static/images/en-us_image_0000001906653348.png
       :alt: **Figure 2** Private domain name resolution
 
       **Figure 2** Private domain name resolution
@@ -78,17 +78,17 @@ Record sets are used in following scenarios:
    MX, CNAME, and TXT record sets are usually used for email services.
 
 
-   .. figure:: /_static/images/en-us_image_0201534900.png
+   .. figure:: /_static/images/en-us_image_0000001906813264.png
       :alt: **Figure 3** Email domain name resolution
 
       **Figure 3** Email domain name resolution
 
 -  Reverse resolution on a private network
 
-   You can use PTR records to translate private IP addresses into private domain names.
+   PTR records translate private IP addresses into private domain names.
 
 
-   .. figure:: /_static/images/en-us_image_0201534953.png
+   .. figure:: /_static/images/en-us_image_0000001942372581.png
       :alt: **Figure 4** Reverse resolution on a private network
 
       **Figure 4** Reverse resolution on a private network
@@ -96,4 +96,4 @@ Record sets are used in following scenarios:
 Helpful Links
 -------------
 
-For details, see :ref:`Overview <dns_usermanual_0035>`.
+For details, see :ref:`Record Set Overview <dns_usermanual_0035>`.

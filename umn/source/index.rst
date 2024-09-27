@@ -7,12 +7,13 @@ Domain Name Service - User Guide
 
    overview/index
    getting_started/index
-   public_zone/index
-   private_zone/index
-   record_set/index
-   ptr_record/index
+   public_zones/index
+   private_zones/index
+   record_sets/index
+   ptr_records/index
+   permissions_management/index
    key_operations_recorded_by_cts/index
    quota_adjustment
-   faqs/index
+   faq/index
    change_history
    glossary

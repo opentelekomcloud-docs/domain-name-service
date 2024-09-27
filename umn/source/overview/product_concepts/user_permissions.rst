@@ -12,7 +12,7 @@ The system provides two types of permissions by default: user management and res
 
 The DNS service provides the following resources: public zones, private zones, and PTR records.
 
--  Public zone: global-level resources. However, you need to add permissions for users in the region, instead of in the global service.
+-  Public zone: global-level resource. However, you need to add permissions for users in the region, instead of in the global service.
 -  Private zone and PTR record: region-level resources. You need to add permissions for users in the project.
 
 For details, see section `Permissions <https://docs.otc.t-systems.com/en-us/permissions/index.html>`__.

@@ -5,12 +5,14 @@
 Quota Adjustment
 ================
 
+.. _dns_usermanual_0016__section102291042164212:
+
 What Is Quota?
 --------------
 
-Quotas are enforced for service resources on the platform to prevent unforeseen spikes in resource usage. Quotas can limit the number and capacity of resources available to users, for example, the maximum number of zones, PTR records, or record sets that you can create.
+Quotas put limits on the quantities and capacities of resources available to users. Private and public zones, PTR records, and record sets all have different quota limits. Quotas are put in place to prevent excessive resource usage and ensure service availability.
 
-If the existing resource quota cannot meet your service requirements, you can apply for a higher quota.
+If existing resource quotas cannot meet your service requirements, you can request higher quotas.
 
 How Do I View My Quotas?
 ------------------------
@@ -44,7 +46,7 @@ Before dialing the hotline number or sending an email, make sure that the follow
    -  Quota type
    -  Required quota
 
-`Learn how to obtain the service hotline and email address. <https://docs.otc.t-systems.com/en-us/public/learnmore.html>`__
+`Learn how to obtain the service hotline and email address. <https://open-telekom-cloud.com/en/contact>`__
 
 .. |image1| image:: /_static/images/en-us_image_0275513364.png
 .. |image2| image:: /_static/images/en-us_image_0152727234.png
