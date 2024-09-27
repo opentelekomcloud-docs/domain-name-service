@@ -7,5 +7,6 @@ Domain Name Service - API Reference
 
    api_usage_guidelines
    apis/index
-   public_parameters/index
+   permissions_policies_and_supported_actions/index
+   appendix/index
    change_history

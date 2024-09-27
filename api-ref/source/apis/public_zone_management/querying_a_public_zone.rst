@@ -65,6 +65,10 @@ Response
       | zone_type             | String                | Zone type, which can be **public** or **private**                                                                                                   |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
       | ttl                   | Integer               | TTL value of the SOA record set in the zone                                                                                                         |
+      |                       |                       |                                                                                                                                                     |
+      |                       |                       | The value ranges from **1** to **2147483647**.                                                                                                      |
+      |                       |                       |                                                                                                                                                     |
+      |                       |                       | The default value is **300**.                                                                                                                       |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
       | serial                | Integer               | Serial number in the SOA record set in a zone, which identifies the change on the primary DNS server                                                |
       |                       |                       |                                                                                                                                                     |
@@ -91,8 +95,6 @@ Response
       | links                 | Object                | Link to the current resource or other related resources. When a response is broken into pages, a **next** link is provided to retrieve all results. |
       |                       |                       |                                                                                                                                                     |
       |                       |                       | For details, see :ref:`Table 3 <dns_api_62002__table0172144213344>`.                                                                                |
-      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-      | enterprise_project_id | String                | ID of the enterprise project associated with the public zone. The value contains a maximum of 36 characters.                                        |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
       | masters               | Array of strings      | Master DNS servers, from which the slave servers get DNS information                                                                                |
       |                       |                       |                                                                                                                                                     |
@@ -137,6 +139,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.

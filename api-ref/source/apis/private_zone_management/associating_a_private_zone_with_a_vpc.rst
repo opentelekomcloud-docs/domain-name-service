@@ -107,6 +107,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.

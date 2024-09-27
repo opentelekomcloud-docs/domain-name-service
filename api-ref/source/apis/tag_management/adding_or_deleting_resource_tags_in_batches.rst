@@ -10,7 +10,7 @@ Function
 
 Add or delete tags for a specified resource in batches.
 
-You can add a maximum of 20 tags to a resource.
+You can add up to 20 tags to a resource.
 
 The API is idempotent.
 
@@ -31,15 +31,21 @@ For details, see :ref:`Table 1 <dns_api_67003__table6099729418149>`.
 
 .. table:: **Table 1** Parameters in the URI
 
-   +---------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter     | Mandatory | Type   | Description                                                                                                                                       |
-   +===============+===========+========+===================================================================================================================================================+
-   | project_id    | Yes       | String | Project ID. You can obtain it in :ref:`Obtaining a Project ID <dns_api_80007>`.                                                                   |
-   +---------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-   | resource_type | Yes       | String | Resource type, which can be **DNS-public_zone**, **DNS-private_zone**, **DNS-public_recordset**, **DNS-private_recordset**, or **DNS-ptr_record** |
-   +---------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-   | resource_id   | Yes       | String | Resource ID                                                                                                                                       |
-   +---------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                     |
+   +=================+=================+=================+=================================================================================+
+   | project_id      | Yes             | String          | Project ID. You can obtain it in :ref:`Obtaining a Project ID <dns_api_80007>`. |
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------+
+   | resource_type   | Yes             | String          | Resource type.                                                                  |
+   |                 |                 |                 |                                                                                 |
+   |                 |                 |                 | -  DNS-public_zone                                                              |
+   |                 |                 |                 | -  DNS-private_zone                                                             |
+   |                 |                 |                 | -  DNS-public_recordset                                                         |
+   |                 |                 |                 | -  DNS-private_recordset                                                        |
+   |                 |                 |                 | -  DNS-ptr_record                                                               |
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------+
+   | resource_id     | Yes             | String          | Resource ID                                                                     |
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------+
 
 Request
 -------
@@ -60,19 +66,17 @@ Request
 
    .. table:: **Table 3** Parameters in the **tags** field
 
-      +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter       | Mandatory       | Type            | Description                                                                                                                                                     |
-      +=================+=================+=================+=================================================================================================================================================================+
-      | key             | Yes             | String          | Tag key, which cannot be left blank or be an empty string. It can contain only digits, letters, hyphens (-), and underscores (_).                               |
-      |                 |                 |                 |                                                                                                                                                                 |
-      |                 |                 |                 | -  When **action** is set to **create**, the key contains 36 Unicode characters at most.                                                                        |
-      |                 |                 |                 | -  When **action** is set to **delete**, the key contains 127 Unicode characters at most.                                                                       |
-      +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | value           | No              | String          | Tag value, which can be an empty string. It can contain only digits, letters, hyphens (-), and underscores (_).                                                 |
-      |                 |                 |                 |                                                                                                                                                                 |
-      |                 |                 |                 | -  When **action** is set to **create**, the tag value is mandatory and contains 43 Unicode characters at most.                                                 |
-      |                 |                 |                 | -  When **action** is set to **delete**, the tag value is optional and contains 255 Unicode characters at most. If you leave it blank, tags are deleted by key. |
-      +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type            | Description                                                                    |
+      +=================+=================+=================+================================================================================+
+      | key             | Yes             | String          | Tag key                                                                        |
+      |                 |                 |                 |                                                                                |
+      |                 |                 |                 | A key can contain up to 36 Unicode characters. The key cannot be empty.        |
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------+
+      | value           | No              | String          | Tag value                                                                      |
+      |                 |                 |                 |                                                                                |
+      |                 |                 |                 | Each value can contain up to 43 Unicode characters and can be an empty string. |
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------+
 
 -  Example request
 
@@ -97,7 +101,11 @@ Request
               }
           ]
       }
-      or
+
+   or
+
+   .. code-block::
+
       {
           "action": "delete",
           "tags": [
@@ -120,6 +128,6 @@ None
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.
