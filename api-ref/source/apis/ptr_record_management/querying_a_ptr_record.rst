@@ -21,12 +21,12 @@ For details, see :ref:`Table 1 <dns_api_66003__table21421675>`.
 
 .. table:: **Table 1** Parameters in the URI
 
-   ============= ========= ====== =====================
+   ============= ========= ====== ====================
    Parameter     Mandatory Type   Description
-   ============= ========= ====== =====================
-   region        Yes       String Region of the tenant.
+   ============= ========= ====== ====================
+   region        Yes       String Region of the tenant
    floatingip_id Yes       String EIP ID
-   ============= ========= ====== =====================
+   ============= ========= ====== ====================
 
 Request
 -------
@@ -59,7 +59,7 @@ Response
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | description           | String                | PTR record description                                                                                                                                         |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | ttl                   | Integer               | PTR record cache duration (in second) on a local DNS server. The longer the duration is, the slower the update takes effect.                                   |
+      | ttl                   | Integer               | PTR record cache duration (in seconds) on a local DNS server. The longer the duration is, the slower the update takes effect.                                  |
       |                       |                       |                                                                                                                                                                |
       |                       |                       | If your service address is frequently changed, set TTL to a smaller value.                                                                                     |
       |                       |                       |                                                                                                                                                                |
@@ -115,6 +115,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.

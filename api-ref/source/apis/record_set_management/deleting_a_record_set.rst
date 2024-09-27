@@ -76,9 +76,16 @@ Response
       |                       |                       |                                                                                                                                                                            |
       |                       |                       | For details, see :ref:`Record Set Type <dns_api_80005__section1188113824413>`.                                                                                             |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | ttl                   | Integer               | Record set cache duration (in second) on a local DNS server. The longer the duration is, the slower the update takes effect.                                               |
+      | ttl                   | Integer               | Record set cache duration (in seconds) on a local DNS server. The longer the duration is, the slower the update takes effect.                                              |
       |                       |                       |                                                                                                                                                                            |
       |                       |                       | If your service address is frequently changed, set TTL to a smaller value.                                                                                                 |
+      |                       |                       |                                                                                                                                                                            |
+      |                       |                       | Value range:                                                                                                                                                               |
+      |                       |                       |                                                                                                                                                                            |
+      |                       |                       | -  Public zone: **1**\ ``-``\ **2147483647**                                                                                                                               |
+      |                       |                       | -  Private zone: **1**\ ``-``\ **2147483647**                                                                                                                              |
+      |                       |                       |                                                                                                                                                                            |
+      |                       |                       | The default value is **300**.                                                                                                                                              |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | records               | Array of strings      | Record set value                                                                                                                                                           |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -139,6 +146,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.

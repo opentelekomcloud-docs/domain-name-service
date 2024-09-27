@@ -45,7 +45,7 @@ Request
       +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                |
       +=================+=================+==================+============================================================================================================================================================================+
-      | name            | No              | String           | Fully qualified domain name (FQDN) suffixed with a zone name, which is a complete host name ended with a dot                                                               |
+      | name            | Yes             | String           | Fully qualified domain name (FQDN) suffixed with a zone name, which is a complete host name ended with a dot                                                               |
       |                 |                 |                  |                                                                                                                                                                            |
       |                 |                 |                  | If it is a record set in a public zone, you can add five labels at most.                                                                                                   |
       |                 |                 |                  |                                                                                                                                                                            |
@@ -59,19 +59,20 @@ Request
       |                 |                 |                  |                                                                                                                                                                            |
       |                 |                 |                  | The value is left blank by default.                                                                                                                                        |
       +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | type            | No              | String           | Record set type                                                                                                                                                            |
+      | type            | Yes             | String           | Record set type                                                                                                                                                            |
       |                 |                 |                  |                                                                                                                                                                            |
-      |                 |                 |                  | The value can be **A**, **AAAA**, **MX**, **CNAME**, **TXT**, **NS** (only in public zones), **SRV**, **PTR** (only in private zones), and **CAA** (only in public zones). |
-      |                 |                 |                  |                                                                                                                                                                            |
-      |                 |                 |                  | The value can be **A**, **AAAA**, **MX**, **CNAME**, **TXT**, **SRV**, or **PTR** (only in private zones).                                                                 |
+      |                 |                 |                  | The value can be **A**, **AAAA**, **MX**, **CNAME**, **TXT**, **NS** (only in public zones), **SRV**, **CAA** (only in public zones), and **PTR** (only in private zones). |
       |                 |                 |                  |                                                                                                                                                                            |
       |                 |                 |                  | For details, see :ref:`Record Set Type <dns_api_80005__section1188113824413>`.                                                                                             |
       +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | ttl             | No              | Integer          | Record set cache duration (in second) on a local DNS server. The longer the duration is, the slower the update takes effect.                                               |
+      | ttl             | No              | Integer          | Record set cache duration (in seconds) on a local DNS server. The longer the duration is, the slower the update takes effect.                                              |
       |                 |                 |                  |                                                                                                                                                                            |
       |                 |                 |                  | If your service address is frequently changed, set TTL to a smaller value.                                                                                                 |
       |                 |                 |                  |                                                                                                                                                                            |
-      |                 |                 |                  | The value ranges from **1** to **2147483647**.                                                                                                                             |
+      |                 |                 |                  | Value range:                                                                                                                                                               |
+      |                 |                 |                  |                                                                                                                                                                            |
+      |                 |                 |                  | -  Public zone: **1**\ ``-``\ **2147483647**                                                                                                                               |
+      |                 |                 |                  | -  Private zone: **1**\ ``-``\ **2147483647**                                                                                                                              |
       |                 |                 |                  |                                                                                                                                                                            |
       |                 |                 |                  | If this parameter is left blank, the value will not be changed.                                                                                                            |
       |                 |                 |                  |                                                                                                                                                                            |
@@ -95,7 +96,9 @@ Request
       .. code-block::
 
          {
-             "description": "This is an example record set.",
+            "name": "www.example.com.",
+            "description": "This is an example record set.",
+             "type": "A",
              "ttl": 3600,
              "records": [
                  "192.168.10.1",
@@ -108,7 +111,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "AAAA",
              "ttl": 3600,
              "records": [
                  "fe80:0:0:0:202:b3ff:fe1e:8329",
@@ -121,7 +126,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "MX",
              "ttl": 3600,
              "records": [
                  "1 mail.example.com"
@@ -133,7 +140,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "CNAME",
              "ttl": 3600,
              "records": [
                  "server1.example.com"
@@ -145,7 +154,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "TXT",
              "ttl": 300,
              "records": [
                  "\"This host is used for sale.\""
@@ -157,7 +168,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "NS",
              "ttl": 300,
              "records": [
                  "node1.example.com.",
@@ -170,7 +183,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "SRV",
              "ttl": 3600,
              "records": [
                  "3 60 2176 sipserver.example.com.",
@@ -183,7 +198,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "PTR",
              "ttl": 3600,
              "records": [
                  "host.example.com."
@@ -196,7 +213,9 @@ Request
       .. code-block::
 
          {
+             "name": "www.example.com.",
              "description": "This is an example record set.",
+             "type": "CAA",
              "ttl": 300,
              "records": [
                  "0 issue \"example.com\"",
@@ -232,9 +251,16 @@ Response
       |                       |                       |                                                                                                                                                                            |
       |                       |                       | For details, see :ref:`Record Set Type <dns_api_80005__section1188113824413>`.                                                                                             |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | ttl                   | Integer               | Record set cache duration (in second) on a local DNS server. The longer the duration is, the slower the update takes effect.                                               |
+      | ttl                   | Integer               | Record set cache duration (in seconds) on a local DNS server. The longer the duration is, the slower the update takes effect.                                              |
       |                       |                       |                                                                                                                                                                            |
       |                       |                       | If your service address is frequently changed, set TTL to a smaller value.                                                                                                 |
+      |                       |                       |                                                                                                                                                                            |
+      |                       |                       | Value range:                                                                                                                                                               |
+      |                       |                       |                                                                                                                                                                            |
+      |                       |                       | -  Public zone: **1**\ ``-``\ **2147483647**                                                                                                                               |
+      |                       |                       | -  Private zone: **1**\ ``-``\ **2147483647**                                                                                                                              |
+      |                       |                       |                                                                                                                                                                            |
+      |                       |                       | The default value is **300**.                                                                                                                                              |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | records               | Array of strings      | Record set value                                                                                                                                                           |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -299,6 +325,6 @@ Response
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.

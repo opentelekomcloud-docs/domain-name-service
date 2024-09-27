@@ -8,7 +8,11 @@ Unsetting a PTR Record
 Function
 --------
 
-Unset the PTR record to the default value.
+Delete a PTR record for an EIP by unsetting it to the default value.
+
+.. note::
+
+   The same :ref:`URI <dns_api_66002__section53701671161015>` is used to :ref:`create <dns_api_66002>`, :ref:`modify <dns_api_66006>`, and :ref:`delete <dns_api_66005>` PTR records. Different request bodies are used to implement different functions.
 
 URI
 ---
@@ -65,6 +69,6 @@ None
 Returned Value
 --------------
 
-If the API call returns a code of 2\ *xx*, for example, 200, 202, or 204, the request is successful.
+If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
 
 For details, see :ref:`Status Code <dns_api_80002>`.
