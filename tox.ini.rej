@@ -1,0 +1,10 @@
+diff a/tox.ini b/tox.ini	(rejected hunks)
+@@ -13,6 +13,8 @@ commands = stestr run {posargs}
+   stestr slowest
+ 
+ [testenv:pep8]
++allowlist_externals =
++  doc8
+ commands =
+   doc8 doc/source README.rst
+ 
