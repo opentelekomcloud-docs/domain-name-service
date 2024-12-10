@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'dns-api-ref.tex',
-     u'Domain Name Service - API Reference',
+    u'Domain Name Service - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 

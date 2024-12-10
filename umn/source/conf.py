@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'dns-umn.tex',
-     u'Domain Name Service - User Guide',
+    u'Domain Name Service - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 

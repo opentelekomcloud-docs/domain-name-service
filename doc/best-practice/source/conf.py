@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'dns-best-practice.tex',
-     u'Domain Name Service - Best Practice',
+    u'Domain Name Service - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 
