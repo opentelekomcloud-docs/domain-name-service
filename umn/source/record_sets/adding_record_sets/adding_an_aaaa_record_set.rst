@@ -105,7 +105,7 @@ You have a web server and obtained an IPv6 address.
 
 #. Click **OK**.
 
-#. Switch back to the **Record Sets** tab.
+#. Switch back to the **Record Sets** page.
 
    The added record set is in the **Normal** state.
 

@@ -105,6 +105,6 @@ Constraints
       |                       | -  Can contain only letters, digits, hyphens (-), at signs (@), and underscores (_). |                       |
       +-----------------------+--------------------------------------------------------------------------------------+-----------------------+
 
-7. Switch back to the **Record Sets** tab.
+7. Switch back to the **Record Sets** page.
 
    The added record set is in the **Normal** state.

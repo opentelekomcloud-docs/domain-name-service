@@ -32,15 +32,15 @@ Process Flow
 
 #. .. _dns_usermanual_0027__en-us_topic_0172268189_li10269636890:
 
-   `Create a user group and grant permissions <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/creating_a_user_group_and_assigning_permissions.html>`__.
+   `Create a user group and grant permissions <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0030.html>`__.
 
    Create a user group on the IAM console and assign the **DNS Administrator** policy to the group.
 
-#. `Create a user and add the user to the user group <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/creating_a_user_and_adding_the_user_to_a_user_group.html>`__
+#. `Create a user and add the user to the user group <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0031.html>`__
 
    Create a user on the IAM console and add the user to the group created in step :ref:`1 <dns_usermanual_0027__en-us_topic_0172268189_li10269636890>`.
 
-#. `Log in to the management console as the created user <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/logging_in_as_a_user.html>`__.
+#. `Log in to the management console as the created user <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0032.html>`__.
 
    Log in to the DNS console by using the created user, and verify that the user only has read permissions for DNS.
 
