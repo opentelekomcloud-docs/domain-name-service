@@ -98,7 +98,7 @@ Constraints
 
 #. Click **OK**.
 
-#. Switch back to the **Record Sets** tab.
+#. Switch back to the **Record Sets** page.
 
    The added record set is in the **Normal** state.
 

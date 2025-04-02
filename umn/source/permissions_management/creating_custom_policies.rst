@@ -14,7 +14,7 @@ You can create custom policies in either of the following two ways:
 
 The following describes how to create a custom policy that allows users to modify DNS zones in the visual editor and JSON view.
 
-Some examples of common custom DNS policies are provided.
+For details, see `Creating a Custom Policy <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0016.html>`__. The following provides examples of common DNS custom policies.
 
 Example Custom Policies
 -----------------------
