@@ -27,9 +27,9 @@ Request
       +=================+=================+=================+=====================================================================================================================+
       | name            | Yes             | String          | Domain name of the zone to be created                                                                               |
       |                 |                 |                 |                                                                                                                     |
-      |                 |                 |                 | -  If a domain name is ended with a dot (.), it cannot exceed 254 characters.                                       |
+      |                 |                 |                 | -  If a domain name is ended with a period (.), it cannot exceed 254 characters.                                    |
       |                 |                 |                 | -  Otherwise, the domain name cannot exceed 253 characters.                                                         |
-      |                 |                 |                 | -  A domain name cannot exceed 63 characters. Multiple domain names are separated with dots (.).                    |
+      |                 |                 |                 | -  A domain name cannot exceed 63 characters. Multiple domain names are separated with periods (.).                 |
       |                 |                 |                 |                                                                                                                     |
       |                 |                 |                 | A domain name is case insensitive. Uppercase letters will also be converted into lowercase letters.                 |
       +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
@@ -80,17 +80,23 @@ Request
 
    .. table:: **Table 3** Description of the **tags** field
 
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter       | Mandatory       | Type            | Description                                                                                                                                                    |
-      +=================+=================+=================+================================================================================================================================================================+
-      | key             | Yes             | String          | Tag key                                                                                                                                                        |
-      |                 |                 |                 |                                                                                                                                                                |
-      |                 |                 |                 | A key can contain up to 36 Unicode characters. **key** must be specified. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | value           | No              | String          | Tag value                                                                                                                                                      |
-      |                 |                 |                 |                                                                                                                                                                |
-      |                 |                 |                 | Each value can contain up to 43 Unicode characters and can be an empty string.                                                                                 |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type            | Description                                                                          |
+      +=================+=================+=================+======================================================================================+
+      | key             | Yes             | String          | Tag key                                                                              |
+      |                 |                 |                 |                                                                                      |
+      |                 |                 |                 | -  Cannot be left blank.                                                             |
+      |                 |                 |                 | -  Must be unique for each resource.                                                 |
+      |                 |                 |                 | -  Can contain a maximum of 128 Unicode characters.                                  |
+      |                 |                 |                 | -  Can contain letters, digits, spaces, and the following characters: \_ . : = + - @ |
+      |                 |                 |                 | -  Cannot start or end with a space, or cannot start with **\_sys\_**.               |
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------+
+      | value           | No              | String          | Tag value                                                                            |
+      |                 |                 |                 |                                                                                      |
+      |                 |                 |                 | -  Can be left blank.                                                                |
+      |                 |                 |                 | -  Can contain a maximum of 255 Unicode characters.                                  |
+      |                 |                 |                 | -  Can contain letters, digits, spaces, and the following characters: \_ . : = + - @ |
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------+
 
 -  Example request
 
