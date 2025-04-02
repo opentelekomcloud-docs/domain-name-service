@@ -95,12 +95,13 @@ You have a web server and obtained an IPv6 address.
       +=======================+======================================================================================+=======================+
       | Key                   | -  Cannot be left blank.                                                             | example_key1          |
       |                       | -  Must be unique for each resource.                                                 |                       |
-      |                       | -  Can contain a maximum of 36 characters.                                           |                       |
-      |                       | -  Can contain only letters, digits, hyphens (-), at signs (@), and underscores (_). |                       |
+      |                       | -  Can contain a maximum of 128 characters.                                          |                       |
+      |                       | -  Can contain letters, digits, spaces, and the following characters: \_ . : = + - @ |                       |
+      |                       | -  Cannot start or end with a space, or cannot start with **\_sys\_**.               |                       |
       +-----------------------+--------------------------------------------------------------------------------------+-----------------------+
-      | Value                 | -  Cannot be left blank.                                                             | example_value1        |
-      |                       | -  Can contain a maximum of 43 characters.                                           |                       |
-      |                       | -  Can contain only letters, digits, hyphens (-), at signs (@), and underscores (_). |                       |
+      | Value                 | -  Can be left blank.                                                                | example_value1        |
+      |                       | -  Can contain a maximum of 255 characters.                                          |                       |
+      |                       | -  Can contain letters, digits, spaces, and the following characters: \_ . : = + - @ |                       |
       +-----------------------+--------------------------------------------------------------------------------------+-----------------------+
 
 #. Click **OK**.
