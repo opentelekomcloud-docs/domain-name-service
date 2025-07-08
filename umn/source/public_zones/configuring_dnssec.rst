@@ -8,7 +8,7 @@ Configuring DNSSEC
 What Is DNSSEC?
 ---------------
 
-DNS Security Extensions (DNSSEC) provides digital signatures to ensure data integrity and authenticity of DNS requests and responses and to defend against common attacks such as DNS spoofing. This prevents you from being redirected to unexpected addresses and protects your core services. **This feature is not yet enabled!**
+DNS Security Extensions (DNSSEC) provides digital signatures to ensure data integrity and authenticity of DNS requests and responses and to defend against common attacks such as DNS spoofing. This prevents you from being redirected to unexpected addresses and protects your core services.
 
 Constraints
 -----------
