@@ -14,7 +14,7 @@ If you use an ECS as an email server, configure a PTR record to map the EIP of t
 
 .. note::
 
-   After an ECS is created and assigned with an EIP, a PTR record will be generated for the EIP by default in format of **ecs-xx-xx-xx-xx.compute.xxx.com**, where **xx-xx-xx-xx** indicates the EIP and **xxx** is the domain name provided by the cloud platform.
+   After an ECS is created and assigned with an EIP, a PTR record will be generated for the EIP by default in format of **ecs-xx-xx-xx-xx.compute.example.com**, where **xx-xx-xx-xx** indicates the EIP and **example** is the domain name provided by the cloud platform.
 
    You can use any of the following methods to query the default PTR record for the EIP:
 
