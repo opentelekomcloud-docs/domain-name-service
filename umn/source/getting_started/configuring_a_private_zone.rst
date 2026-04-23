@@ -61,7 +61,7 @@ Creating a Private Zone
       Set other parameters by referring to :ref:`Creating a Private Zone <en-us_topic_0057773658>`.
 
 
-      .. figure:: /_static/images/en-us_image_0000001906813838.png
+      .. figure:: /_static/images/en-us_image_0000002385949954.png
          :alt: **Figure 2** Creating a private zone
 
          **Figure 2** Creating a private zone

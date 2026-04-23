@@ -10,6 +10,7 @@ Private Zones
 -  :ref:`Managing Private Zones <dns_usermanual_0033>`
 -  :ref:`Associating a VPC with a Private Zone <dns_usermanual_0003>`
 -  :ref:`Disassociating a VPC from a Private Zone <dns_usermanual_0004>`
+-  :ref:`Configuring Recursive Resolution for Subdomains <dns_usermanual_05046>`
 
 .. toctree::
    :maxdepth: 1
@@ -20,3 +21,4 @@ Private Zones
    managing_private_zones
    associating_a_vpc_with_a_private_zone
    disassociating_a_vpc_from_a_private_zone
+   configuring_recursive_resolution_for_subdomains

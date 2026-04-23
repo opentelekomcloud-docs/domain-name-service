@@ -17,7 +17,7 @@ You can modify, delete private zones or view their details.
 Modifying a Private Zone
 ------------------------
 
-Change the domain name administrator's email address and description of the private zone.
+Change the domain name administrator's email address, enable or disable the recursive resolution proxy for subdomains, and update the description of a private zone.
 
 .. note::
 
@@ -39,7 +39,7 @@ Change the domain name administrator's email address and description of the priv
 
    The **Modify Private Zone** dialog box is displayed.
 
-#. Change the email address or description of the zone as required.
+#. Change the domain name administrator's email address, enable or disable the recursive resolution proxy for subdomains, and update the description of the private zone.
 
 #. Click **OK**.
 
