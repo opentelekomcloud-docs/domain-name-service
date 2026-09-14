@@ -5,7 +5,7 @@
 Reverse Resolution
 ==================
 
-Reverse resolution, also called as reverse DNS lookup, resolves an IP address back to a host name. This is typically used to affirm the credibility of email servers.
+Reverse resolution, also called reverse DNS lookup, resolves an IP address back to a hostname. This is typically used to affirm the credibility of email servers.
 
 After a recipient server receives an email, it checks whether the IP address and domain name of the sender server are trustworthy and determines whether the email is spam. If the recipient server cannot obtain the domain name mapped to the IP address of the sender server, it concludes that the email is sent by a malicious host and rejects it. It is necessary to configure pointer records (PTR) to point the IP addresses of your email servers to domain names.
 

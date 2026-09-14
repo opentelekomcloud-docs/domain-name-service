@@ -19,7 +19,7 @@ A private zone contains information about how to map a domain name (such as ecs.
 
    **Figure 1** Process for resolving a private domain name
 
-When an ECS in the VPC requests to access a private domain name, the private DNS server directly returns a private IP address mapped to the domain name.
+When an ECS in the VPC requests access to a private domain name, the private DNS server directly returns a private IP address mapped to the domain name.
 
 Private zones allow you to:
 
@@ -38,14 +38,14 @@ You can use private domain names in the following scenarios:
 Managing ECS Host Names
 -----------------------
 
-You can plan host names based on the locations, usages, and account information of ECSs, and map the host names to private IP addresses, helping you manage ECSs more easily.
+You can plan hostnames based on the locations, usages, and account information of ECSs, and map the hostnames to private IP addresses, helping you manage ECSs more easily.
 
 For example, if you have deployed 20 ECSs in an AZ, 10 for website A and 10 for website B, you can plan their host names (private domain names) as follows:
 
 -  ECSs for website A: weba01.region1.az1.com - weba10.region1.az1.com
 -  ECSs for website B: webb01.region1.az1.com - webb10.region1.az1.com
 
-After you configure the host names, you will be able to quickly determine the locations and usages of ECSs during routine management and maintenance.
+After you configure the hostnames, you will be able to quickly determine the locations and usages of ECSs during routine management and maintenance.
 
 See :ref:`Configuring a Private Zone <dns_qs_0006>` for detailed operations.
 
@@ -97,7 +97,7 @@ When you create an ECS, note the following:
 
 -  If a private DNS server is configured for the subnet, the private DNS server directly processes the requests to access cloud services.
 
-   When the ECS accesses the cloud services, the private DNS server returns their private IP addresses, instead of routing requests over the Internet. This reduces network latency and improves access speed. Steps 1 to 4 on the left of :ref:`Figure 3 <dns_pd_0005__fig42701320112215>` shows the process.
+   When the ECS accesses the cloud services, the private DNS server returns their private IP addresses, instead of routing requests over the Internet. This reduces network latency and improves access speed. Steps 1 to 4 on the left of :ref:`Figure 3 <dns_pd_0005__fig42701320112215>` show the process.
 
 .. _dns_pd_0005__fig42701320112215:
 

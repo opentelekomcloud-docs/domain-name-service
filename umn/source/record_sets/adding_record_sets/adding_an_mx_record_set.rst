@@ -77,12 +77,12 @@ You have deployed an email server and obtained its domain name.
       |                       |                                                                                                                               |                                   |
       |                       | You can enter a maximum of 50 record values, each on a separate line.                                                         |                                   |
       |                       |                                                                                                                               |                                   |
-      |                       | The format is **[priority][mail server host name]**.                                                                          |                                   |
+      |                       | The format is **[priority][mail server hostname]**.                                                                           |                                   |
       |                       |                                                                                                                               |                                   |
       |                       | Configuration rules:                                                                                                          |                                   |
       |                       |                                                                                                                               |                                   |
       |                       | -  **priority**: priority for an email server to receive emails. A smaller value indicates a higher priority.                 |                                   |
-      |                       | -  **mail server host name**: domain name provided by the email service provider                                              |                                   |
+      |                       | -  **mail server hostname**: domain name provided by the email service provider                                               |                                   |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
       | Tag                   | (Optional) Identifier of a record set. Each tag contains a key and a value. You can add a maximum of 20 tags to a record set. | example_key1                      |
       |                       |                                                                                                                               |                                   |
