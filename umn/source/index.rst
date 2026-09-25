@@ -11,6 +11,7 @@ Domain Name Service - User Guide
    private_zones/index
    record_sets/index
    ptr_records/index
+   resolver/index
    permissions_management/index
    key_operations_recorded_by_cts/index
    quota_adjustment
