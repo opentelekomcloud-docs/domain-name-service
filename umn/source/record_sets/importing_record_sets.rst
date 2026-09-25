@@ -46,7 +46,7 @@ You can import a maximum of 500 record sets at a time.
 
    After the import is complete, you can check whether record sets are successfully imported or not.
 
-   -  **Successful Import**: The number of successfully imported record sets are displayed.
+   -  **Successful Import**: The number of successfully imported record sets is displayed.
    -  **Failed Import**: All failed record sets are listed. You can resolve the problems based on the failure causes.
 
 .. |image1| image:: /_static/images/en-us_image_0000001906653140.png

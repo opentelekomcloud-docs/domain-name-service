@@ -28,7 +28,7 @@ DNS permissions for global-level resources cannot be set in the global service p
 
 When you set **Scope** to **Region-specific projects** and select the specified projects in the specified regions, the users only have permissions for DNS in the selected projects. If you set **Scope** to **All resources**, the users have permissions for DNS in all region-specific projects. When accessing DNS, the users need to switch to the authorized region.
 
-You can grant permissions by using roles and policies.
+You can grant permissions using roles and policies.
 
 -  Roles: A coarse-grained authorization strategy provided by IAM to assign permissions based on users' job responsibilities. Only a limited number of service-level roles are available for authorization. Cloud services depend on each other. When you grant permissions using roles, you also need to attach dependent roles. Roles are not ideal for fine-grained authorization and least privilege access.
 -  Policies: A fine-grained authorization strategy that defines permissions required to perform operations on specific cloud resources under certain conditions. This type of authorization is more flexible and is ideal for least privilege access. For example, you can grant users only permissions to manage DNS resources of a certain type. A majority of fine-grained policies contain permissions for specific APIs, and permissions are defined using API actions. For the API actions supported by DNS, see "Permissions and Supported Actions" in the *Domain Name Service API Reference*.

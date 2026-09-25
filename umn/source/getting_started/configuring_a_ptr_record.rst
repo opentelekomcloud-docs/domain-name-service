@@ -26,7 +26,7 @@ If you use an ECS as an email server, configure a PTR record to map the EIP of t
 
    After the PTR record is created, the default record will be overwritten.
 
-This following are operations for you to add a PTR record for a cloud resource, such as ECS.
+The following are operations for you to add a PTR record for a cloud resource, such as ECS.
 
 Constraints
 -----------
