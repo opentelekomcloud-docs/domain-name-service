@@ -11,6 +11,10 @@ APIs
 -  :ref:`Record Set Management <dns_api_64000>`
 -  :ref:`PTR Record Management <dns_api_66000>`
 -  :ref:`Tag Management <dns_api_67000>`
+-  :ref:`Quota Management <dns_api_614000>`
+-  :ref:`DNSSEC <topic_300000013>`
+-  :ref:`Endpoint Management <topic_300000014>`
+-  :ref:`Endpoint Rule Management <topic_300000015>`
 
 .. toctree::
    :maxdepth: 1
@@ -22,3 +26,7 @@ APIs
    record_set_management/index
    ptr_record_management/index
    tag_management/index
+   quota_management/index
+   dnssec/index
+   endpoint_management/index
+   endpoint_rule_management/index
