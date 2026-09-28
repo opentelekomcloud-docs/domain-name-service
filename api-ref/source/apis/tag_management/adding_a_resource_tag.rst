@@ -2,13 +2,13 @@
 
 .. _dns_api_67001:
 
-Adding Resource Tags
-====================
+Adding a Resource Tag
+=====================
 
 Function
 --------
 
-Add tags to a specified resource.
+Add a tag to a specified resource.
 
 You can add up to 20 tags to a resource.
 
@@ -102,9 +102,16 @@ Response
 
 None
 
-Returned Value
---------------
+Status Codes
+------------
 
-If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
+=========== =======================================================
+Status Code Description
+=========== =======================================================
+204         Response to the request for adding a tag to a resource.
+=========== =======================================================
 
-For details, see :ref:`Status Code <dns_api_80002>`.
+Error Codes
+-----------
+
+For details, see :ref:`Error Code <dns_api_80003>`.

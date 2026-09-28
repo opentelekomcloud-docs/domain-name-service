@@ -52,7 +52,7 @@ For details, see :ref:`Table 1 <dns_api_66004__table1562846014112>`.
    |                 |                 |                 |                                                                                                                                         |
    |                 |                 |                 | The tags are in AND relationship.                                                                                                       |
    |                 |                 |                 |                                                                                                                                         |
-   |                 |                 |                 | For details, see :ref:`Adding Resource Tags <dns_api_67001>`.                                                                           |
+   |                 |                 |                 | For details, see :ref:`Adding a Resource Tag <dns_api_67001>`.                                                                          |
    |                 |                 |                 |                                                                                                                                         |
    |                 |                 |                 | Exact matching will work. If the value starts with an asterisk (``*``), fuzzy matching will work for the string following the asterisk. |
    |                 |                 |                 |                                                                                                                                         |
@@ -220,9 +220,18 @@ Response
           ]
       }
 
-Returned Value
---------------
+Status Codes
+------------
 
-If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
+=========== =================================================
+Status Code Description
+=========== =================================================
+200         Response to the request for querying PTR records.
+400         Error response.
+500         Error response.
+=========== =================================================
 
-For details, see :ref:`Status Code <dns_api_80002>`.
+Error Codes
+-----------
+
+For details, see :ref:`Error Code <dns_api_80003>`.

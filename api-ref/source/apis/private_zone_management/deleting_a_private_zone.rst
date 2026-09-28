@@ -113,6 +113,7 @@ Response
       Parameter Type   Description
       ========= ====== ============================
       self      String Link to the current resource
+      next      String Link to the next page
       ========= ====== ============================
 
    .. _dns_api_63008__table4448008117179:
@@ -169,9 +170,19 @@ Response
           ]
       }
 
-Returned Value
---------------
+Status Codes
+------------
 
-If a 2xx status code is returned, for example, 200, 202, or 204, the request is successful.
+=========== ====================================================
+Status Code Description
+=========== ====================================================
+202         Response to the request for deleting a private zone.
+400         Error response.
+404         Error response.
+500         Error response.
+=========== ====================================================
 
-For details, see :ref:`Status Code <dns_api_80002>`.
+Error Codes
+-----------
+
+For details, see :ref:`Error Code <dns_api_80003>`.
