@@ -28,7 +28,7 @@ DNS permissions for global-level resources cannot be set in the global service p
 
 When you set **Scope** to **Region-specific projects** and select the specified projects in the specified regions, the users only have permissions for DNS in the selected projects. If you set **Scope** to **All resources**, the users have permissions for DNS in all region-specific projects. When accessing DNS, the users need to switch to the authorized region.
 
-You can grant permissions by using roles and policies.
+You can grant permissions using roles and policies.
 
 -  Roles: A coarse-grained authorization strategy provided by IAM to assign permissions based on users' job responsibilities. Only a limited number of service-level roles are available for authorization. Cloud services depend on each other. When you grant permissions using roles, you also need to attach dependent roles. Roles are not ideal for fine-grained authorization and least privilege access.
 -  Policies: A fine-grained authorization strategy that defines permissions required to perform operations on specific cloud resources under certain conditions. This type of authorization is more flexible and is ideal for least privilege access. For example, you can grant users only permissions to manage DNS resources of a certain type. A majority of fine-grained policies contain permissions for specific APIs, and permissions are defined using API actions. For the API actions supported by DNS, see "Permissions and Supported Actions" in the *Domain Name Service API Reference*.
@@ -39,15 +39,15 @@ You can grant permissions by using roles and policies.
 
 .. table:: **Table 1** System-defined permissions for DNS
 
-   +--------------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | Role/Policy Name   | Description                                                                                      | Type                  | Dependencies                                                                                                             |
-   +====================+==================================================================================================+=======================+==========================================================================================================================+
-   | DNS FullAccess     | Full permissions for DNS                                                                         | System-defined policy | None                                                                                                                     |
-   +--------------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | DNS ReadOnlyAccess | Read-only permissions for DNS. Users granted with these permissions can only view DNS resources. | System-defined policy | None                                                                                                                     |
-   +--------------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | DNS Administrator  | Full permissions for DNS                                                                         | System-defined role   | **Tenant Guest** and **VPC Administrator**, which must be attached in the same project as the **DNS Administrator** role |
-   +--------------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+   +--------------------+---------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | Role/Policy Name   | Description                                                                                 | Type                  | Dependencies                                                                                                             |
+   +====================+=============================================================================================+=======================+==========================================================================================================================+
+   | DNS FullAccess     | Full permissions for DNS                                                                    | System-defined policy | None                                                                                                                     |
+   +--------------------+---------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | DNS ReadOnlyAccess | Read-only permissions for DNS. Users granted these permissions can only view DNS resources. | System-defined policy | None                                                                                                                     |
+   +--------------------+---------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | DNS Administrator  | Full permissions for DNS                                                                    | System-defined role   | **Tenant Guest** and **VPC Administrator**, which must be attached in the same project as the **DNS Administrator** role |
+   +--------------------+---------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
 
 :ref:`Table 2 <dns_pd_0002__table6721119192915>` lists common operations supported by system-defined permissions for DNS.
 
@@ -55,49 +55,79 @@ You can grant permissions by using roles and policies.
 
 .. table:: **Table 2** Common operations supported by system-defined permissions
 
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Operation                                | DNS FullAccess | DNS ReadOnlyAccess | DNS Administrator |
-   +==========================================+================+====================+===================+
-   | Creating a public zone                   | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Viewing a public zone                    | Supported      | Supported          | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Modifying a public zone                  | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Deleting a public zone                   | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Creating a private zone                  | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Viewing a private zone                   | Supported      | Supported          | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Modifying a private zone                 | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Deleting a private zone                  | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Associating a VPC with a private zone    | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Disassociating a VPC from a private zone | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Adding a record set                      | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Viewing a record set                     | Supported      | Supported          | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Modify a record set                      | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Deleting a record set                    | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Creating a PTR record                    | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Viewing a PTR record                     | Supported      | Supported          | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Modifying a PTR record                   | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
-   | Deleting a PTR record                    | Supported      | Not supported      | Supported         |
-   +------------------------------------------+----------------+--------------------+-------------------+
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Operation                                  | DNS FullAccess | DNS ReadOnlyAccess | DNS Administrator |
+   +============================================+================+====================+===================+
+   | Creating a public zone                     | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Viewing a public zone                      | Supported      | Supported          | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Modifying a public zone                    | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Deleting a public zone                     | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Creating a private zone                    | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Viewing a private zone                     | Supported      | Supported          | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Modifying a private zone                   | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Deleting a private zone                    | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Associating a VPC with a private zone      | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Disassociating a VPC from a private zone   | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Adding a record set                        | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Viewing a record set                       | Supported      | Supported          | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Modifying a record set                     | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Deleting a record set                      | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Creating a PTR record                      | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Viewing a PTR record                       | Supported      | Supported          | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Modifying a PTR record                     | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Deleting a PTR record                      | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Enabling DNSSEC                            | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Disabling DNSSEC                           | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Querying DNSSEC                            | Supported      | Supported          | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Creating an endpoint                       | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Viewing an endpoint                        | Supported      | Supported          | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Modifying an endpoint                      | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Deleting an endpoint                       | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Binding an IP address to an endpoint       | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Unbinding an IP address from an endpoint   | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Creating an endpoint rule                  | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Viewing an endpoint rule                   | Supported      | Supported          | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Modifying an endpoint rule                 | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Deleting an endpoint rule                  | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Associating a VPC with an endpoint rule    | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
+   | Disassociating a VPC from an endpoint rule | Supported      | Not supported      | Supported         |
+   +--------------------------------------------+----------------+--------------------+-------------------+
 
 Helpful Links
 -------------
 
 -  `IAM Service Overview <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0026.html>`__
 -  :ref:`Creating a User and Granting DNS Permissions <dns_usermanual_0027>`
--  "Permissions Policies and Supported Actions" in the *Domain Name Service API Reference*
+-  "Permissions and Supported Actions" in the *Domain Name Service API Reference*

@@ -61,7 +61,7 @@ Creating an Outbound Endpoint
       +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+
       | Region                | Region where the outbound endpoint works.                                                                                                          | eu-de                       |
       +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+
-      | VPC                   | The VPC over which all outbound DNS requires are forwarded to the IP addresses specified in the endpoint rules.                                    | vpc-test                    |
+      | VPC                   | The VPC over which all outbound DNS requests are forwarded to the IP addresses specified in the endpoint rules.                                    | vpc-test                    |
       |                       |                                                                                                                                                    |                             |
       |                       | .. caution::                                                                                                                                       |                             |
       |                       |                                                                                                                                                    |                             |

@@ -39,11 +39,11 @@ Procedure
 
    b. In the service list, choose **Network** > **Domain Name Service**.
 
-      The DNS console is displayed.
+      The DNS console appears.
 
    c. In the navigation pane on the left, choose **Public Zones**.
 
-      The **Public Zones** page is displayed.
+      The **Public Zones** page appears.
 
    d. Locate the public zone for which you want to enable DNSSEC and click the domain name.
 

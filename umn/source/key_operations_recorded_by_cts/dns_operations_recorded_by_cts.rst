@@ -59,30 +59,36 @@ After you enable CTS, whenever a DNS API is called, the operation is recorded in
 
 .. table:: **Table 2** Region-level DNS operations that can be recorded by CTS
 
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Operation                                          | Resource Type       | Trace Name                |
-   +====================================================+=====================+===========================+
-   | Creating a record set in a private zone            | privateRecordSet    | createPrivateRecordSet    |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Deleting a record set from a private zone          | privateRecordSet    | deletePrivateRecordSet    |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Modifying a record set of a private zone           | privateRecordSet    | updatePrivateRecordSet    |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Creating a private zone                            | privateZone         | createPrivateZone         |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Modifying a private zone                           | privateZone         | updatePrivateZone         |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Deleting a private zone                            | privateZone         | deletePrivateZone         |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Associating a VPC with a private zone              | privateZone         | associateRouter           |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Disassociating a VPC from a private zone           | privateZone         | disassociateRouter        |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Adding a tag to a private zone                     | privateZoneTag      | createPrivateZoneTag      |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Deleting a tag from a private zone                 | privateZoneTag      | deletePrivateZoneTag      |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Adding a tag to a record set of a private zone     | privateRecordSetTag | createPrivateRecordSetTag |
-   +----------------------------------------------------+---------------------+---------------------------+
-   | Deleting a tag from a record set of a private zone | privateRecordSetTag | deletePrivateRecordSetTag |
-   +----------------------------------------------------+---------------------+---------------------------+
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Operation                                          | Resource Type       | Trace Name                  |
+   +====================================================+=====================+=============================+
+   | Creating a record set in a private zone            | privateRecordSet    | createPrivateRecordSet      |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Deleting a record set from a private zone          | privateRecordSet    | deletePrivateRecordSet      |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Modifying a record set of a private zone           | privateRecordSet    | updatePrivateRecordSet      |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Creating a private zone                            | privateZone         | createPrivateZone           |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Modifying a private zone                           | privateZone         | updatePrivateZone           |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Deleting a private zone                            | privateZone         | deletePrivateZone           |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Associating a VPC with a private zone              | privateZone         | associateRouter             |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Disassociating a VPC from a private zone           | privateZone         | disassociateRouter          |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Adding a tag to a private zone                     | privateZoneTag      | createPrivateZoneTag        |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Deleting a tag from a private zone                 | privateZoneTag      | deletePrivateZoneTag        |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Adding a tag to a record set of a private zone     | privateRecordSetTag | createPrivateRecordSetTag   |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Deleting a tag from a record set of a private zone | privateRecordSetTag | deletePrivateRecordSetTag   |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Associating a VPC with an endpoint rule            | resolverRule        | associateResolverRuleRouter |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Creating an endpoint rule                          | resolverRule        | createResolverRule          |
+   +----------------------------------------------------+---------------------+-----------------------------+
+   | Deleting an endpoint rule                          | resolverRule        | deleteResolverRule          |
+   +----------------------------------------------------+---------------------+-----------------------------+
